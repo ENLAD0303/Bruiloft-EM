@@ -2,6 +2,9 @@
   "name": "bruiloft",
   "main": "worker.js",
   "compatibility_date": "2025-01-01",
+  "vars": {
+    "ADMIN_PASSWORD": "Jopie&Muiszijnnietpluis"
+  },
   "assets": {
     "directory": "./",
     "binding": "ASSETS"
