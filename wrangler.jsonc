@@ -1,0 +1,16 @@
+{
+  "name": "esther-martijn-wedding",
+  "main": "worker.js",
+  "compatibility_date": "2025-01-01",
+  "assets": {
+    "directory": "./",
+    "binding": "ASSETS"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "wedding-rsvp",
+      "database_id": "PLAK-HIER-JE-DATABASE-ID"
+    }
+  ]
+}
