@@ -125,15 +125,7 @@ async function handleResponsesGet(request, env) {
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
-    
-    if (url.pathname === "/api/debug-admin-check") {
-      const val = env.ADMIN_PASSWORD;
-      return new Response(JSON.stringify({
-        bestaat: typeof val !== "undefined",
-        isTekst: typeof val === "string",
-        lengte: typeof val === "string" ? val.length : null
-      }), { headers: { "content-type": "application/json" } });
-    }
+
     
     if (url.pathname === "/api/rsvp") {
       if (request.method === "GET") return handleRsvpGet(request, env);
