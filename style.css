@@ -167,8 +167,8 @@
 
   /* ---- gifts ---- */
   .sprig{ display:block; margin:0 auto 18px; }
-  .photo-band{ width:100%; overflow:hidden; line-height:0; position:relative; }
-  .photo-band img{ width:100%; height:auto; display:block; max-height:760px; object-fit:contain; background:var(--lilac-deep); }
+  .photo-band{ width:100%; line-height:0; position:relative; }
+  .photo-band img{ width:100%; height:auto; display:block; }
   .photo-band.hero-band img{ filter:brightness(.6); }
   .hero-band-overlay{
     position:absolute; inset:0; display:flex; flex-direction:column;
