@@ -50,12 +50,12 @@
     foodEvents: ["diner","receptie"],
     programme: [
       { day: "Vrijdag 21 mei 2027", items: [
-        { key:"stadhuis", time:"14:00", title:"Stadhuis", place:"Stadsloket Centrum", address:"Amstel 1, 1011 PN Amsterdam", note:"Hier trouwen wij voor de wet." },
+        { key:"stadhuis", time:"14:00", title:"Stadhuis", place:"Stadsloket Centrum", address:"Amstel 1, 1011 PN Amsterdam", note:"#yolo trouwen voor de wet!!" },
         { key:"diner", time:"18:00", title:"Diner", place:"Westerwijk", address:"Admiraal de Ruijterweg 150, 1056 GV Amsterdam", note:"Een diner met al onze lieve vrienden en familie." }
       ]},
       { day: "Zaterdag 22 mei 2027", items: [
         { key:"kerk", time:"14:00 – 15:30", title:"Kerkdienst", place:"Keizersgrachtkerk", address:"Keizersgracht 566, 1017 EM Amsterdam", note:"De kerkdienst waar ons huwelijk zal worden ingezegend." },
-        { key:"receptie", time:"vanaf 18:00", title:"Borrel & feest", place:"Hoftuin", address:"Nieuwe Herengracht 18, Amsterdam", note:"Diner, drankjes en dansen tot in de late uurtjes." }
+        { key:"receptie", time:"vanaf 18:00", title:"Borrel & feest", place:"Hoftuin", address:"Nieuwe Herengracht 18, Amsterdam", note:"Borrel, drankjes en dansen tot in de late uurtjes." }
       ]}
     ],
     faq: [
