@@ -10,7 +10,7 @@
     {
       "binding": "DB",
       "database_name": "wedding-rsvp",
-      "database_id": "PLAK-HIER-JE-DATABASE-ID"
+      "database_id": "wedding-rsvp"
     }
   ]
 }
