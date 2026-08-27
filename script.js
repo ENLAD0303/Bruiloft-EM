@@ -95,13 +95,13 @@
       ]},
       { day: "Zaterdag 22 mei 2027", items: [
         { key:"kerk", time:"14:00 – 15:30", title:"Kerkdienst", place:"Keizersgrachtkerk", address:"Keizersgracht 566, 1017 EM Amsterdam", note:"De kerkdienst waar ons huwelijk zal worden ingezegend." },
-        { key:"receptie", time:"vanaf 18:00", title:"Borrel & feest", place:"Hoftuin", address:"Nieuwe Herengracht 18, Amsterdam", note:"Borrel, drankjes en dansen tot in de late uurtjes." }
+        { key:"receptie", time:"18:00 - 24:00", title:"Borrel & feest", place:"Hoftuin", address:"Nieuwe Herengracht 18, Amsterdam", note:"Borrel, drankjes en dansen tot in de late uurtjes." }
       ]}
     ],
     faq: [
       { q:"Voor wanneer kan ik uiterlijk RSVP’en?", a:"Laat alsjeblieft vóór 22 maart 2027 weten of je komt!" },
       { q:"Hoe kom ik bij de kerk?", a:"1. Parkeer bij een P+R en reis met het OV de stad in.\n2. Huur een OV-fiets vanaf Amsterdam Centraal of Amstel station en fiets een minuutje of 15." },
-      { q:"Hoe kom ik bij de receptielocatie? (voor gasten die welkom zijn op de receptie)", a:"Vanaf de kerk loop je in ongeveer 20 minuten naar de receptielocatie. Geen zin om te lopen? Pak dan tram 1, 7 of 19 vanaf halte Rijksmuseum naar Weesperplein — daarvandaan is het nog 10 minuten lopen. Of spring op de metro richting Amsterdam Centraal en stap uit bij Waterlooplein." },
+      { q:"Hoe kom ik bij de receptielocatie?", a:"Vanaf de kerk loop je in ongeveer 20 minuten naar de receptielocatie. Geen zin om te lopen? Pak dan tram 1, 7 of 19 vanaf halte Rijksmuseum naar Weesperplein. Daarvandaan is het nog tien minuten lopen, of pak daar de metro richting Amsterdam centraal station en stap uit bij Waterlooplein." onlyReceptie:true},
       { q:"Is er een dresscode?", a:"Later meer informatie!" }
     ],
     faqUpdated: "laatste update 26 aug",
@@ -318,19 +318,21 @@
       + '</div></section>';
   }
 
+ function guestAttendsReceptie(){
+    var tag = currentGuest ? currentGuest.tag : previewTag;
+    if(!tag) return true;
+    return CONTENT.tagAttends[tag] && CONTENT.tagAttends[tag].indexOf("receptie") !== -1;
+  }
+
   function renderFaq(){
-    var items = CONTENT.faq.map(function(f,i){
+    var visibleFaq = CONTENT.faq.filter(function(f){
+      return !f.onlyReceptie || guestAttendsReceptie();
+    });
+    var items = visibleFaq.map(function(f,i){
       return '<div class="faq-item" data-open="false" data-i="'+i+'">'
         + '<button type="button" class="faq-q"><span>'+escapeHtml(f.q)+'</span><span class="plus">+</span></button>'
         + '<div class="faq-a">'+escapeHtml(f.a)+'</div></div>';
     }).join("");
-    return '<section id="praktisch">'
-      + '<div class="photo-band"><img src="'+IMAGES.vangogh+'" alt="Esther en Martijn in het museum"></div>'
-      + '<div class="wrap">'
-      + '<h2 class="title">Extra informatie</h2>'
-      + '<p class="faq-updated">Parkeren, eten en andere belangrijke zaken! (laatste update 26 aug)</p>'
-      + items + '</div></section>';
-  }
 
   function renderGifts(){
     return '<section id="cadeau" class="band">'
@@ -442,12 +444,14 @@
   function renderAdminGate(){
     return '<div class="admin-gate">'
       + '<p class="glabel">Alleen voor het bruidspaar</p>'
-      + '<p class="hint">Vul het wachtwoord in om het RSVP-overzicht te zien.</p>'
+      + '<p class="hint">Hey nieuwsgierig aagje, je hebt het geheime gedeelte gevonden. Het staat je vrij om wat wachtwoorden te proberen, maar ik kan je vertellen: wat hierna komt is heel saai.</p>'
       + '<form id="admin-gate-form">'
       + '<input type="password" id="admin-pw" placeholder="Wachtwoord" autocomplete="off">'
       + '<button type="submit" class="submit-btn">Bekijken</button>'
       + '<div class="err" id="admin-gate-err"></div>'
-      + '</form></div>';
+      + '</form>'
+      + '<p style="margin-top:16px;"><a href="javascript:history.back()" class="switch-link">← Terug naar de site</a></p>'
+      + '</div>';
   }
 
   function wireAdminGate(){
