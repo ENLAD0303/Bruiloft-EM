@@ -9,10 +9,10 @@
   };
 
     var GUESTS = [
-    { "code": "demo-stadhuis", "naam": "Demo Stadhuis", "tag": "stadhuis" },
-    { "code": "demo-dag", "naam": "Demo Daggast", "tag": "dag" },
-    { "code": "demo-kerkreceptie", "naam": "Demo Kerkreceptie", "tag": "kerkreceptie" },
-    { "code": "demo-kerk", "naam": "Demo Kerk", "tag": "kerk" },
+    { "code": "test-stadhuis", "naam": "Test Stadhuis", "tag": "stadhuis" },
+    { "code": "test-dag", "naam": "Test Daggast", "tag": "dag" },
+    { "code": "test-kerkreceptie", "naam": "Test Kerkreceptie", "tag": "kerkreceptie" },
+    { "code": "tes-kerk", "naam": "Test Kerk", "tag": "kerk" },
     { "code": "esther-dijkman", "naam": "Esther Dijkman", "tag": "dag" },
     { "code": "eddy-dijkman", "naam": "Eddy Dijkman", "tag": "dag" },
     { "code": "jonathan-dijkman", "naam": "Jonathan Dijkman", "tag": "dag" },
