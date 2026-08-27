@@ -324,7 +324,11 @@
     return CONTENT.tagAttends[tag] && CONTENT.tagAttends[tag].indexOf("receptie") !== -1;
   }
 
- var items = visibleFaq.map(function(f,i){
+   function renderFaq(){
+    var visibleFaq = CONTENT.faq.filter(function(f){
+      return !f.onlyReceptie || guestAttendsReceptie();
+    });
+    var items = visibleFaq.map(function(f,i){
       return '<div class="faq-item" data-open="false" data-i="'+i+'">'
         + '<button type="button" class="faq-q"><span>'+escapeHtml(f.q)+'</span><span class="plus">+</span></button>'
         + '<div class="faq-a">'+escapeHtml(f.a)+'</div></div>';
