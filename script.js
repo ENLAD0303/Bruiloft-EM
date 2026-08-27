@@ -101,7 +101,7 @@
     faq: [
       { q:"Voor wanneer kan ik uiterlijk RSVP’en?", a:"Laat alsjeblieft vóór 22 maart 2027 weten of je komt!" },
       { q:"Hoe kom ik bij de kerk?", a:"1. Parkeer bij een P+R en reis met het OV de stad in.\n2. Huur een OV-fiets vanaf Amsterdam Centraal of Amstel station en fiets een minuutje of 15." },
-      { q:"Hoe kom ik bij de receptielocatie?", a:"Vanaf de kerk loop je in ongeveer 20 minuten naar de receptielocatie. Geen zin om te lopen? Pak dan tram 1, 7 of 19 vanaf halte Rijksmuseum naar Weesperplein. Daarvandaan is het nog tien minuten lopen, of pak daar de metro richting Amsterdam centraal station en stap uit bij Waterlooplein." onlyReceptie:true},
+      { q:"Hoe kom ik bij de receptielocatie?", a:"Vanaf de kerk loop je in ongeveer 20 minuten naar de receptielocatie. Geen zin om te lopen? Pak dan tram 1, 7 of 19 vanaf halte Rijksmuseum naar Weesperplein. Daarvandaan is het nog tien minuten lopen, of pak daar de metro richting Amsterdam centraal station en stap uit bij Waterlooplein.", onlyReceptie:true},
       { q:"Is er een dresscode?", a:"Later meer informatie!" }
     ],
     faqUpdated: "laatste update 26 aug",
@@ -324,15 +324,19 @@
     return CONTENT.tagAttends[tag] && CONTENT.tagAttends[tag].indexOf("receptie") !== -1;
   }
 
-  function renderFaq(){
-    var visibleFaq = CONTENT.faq.filter(function(f){
-      return !f.onlyReceptie || guestAttendsReceptie();
-    });
-    var items = visibleFaq.map(function(f,i){
+ var items = visibleFaq.map(function(f,i){
       return '<div class="faq-item" data-open="false" data-i="'+i+'">'
         + '<button type="button" class="faq-q"><span>'+escapeHtml(f.q)+'</span><span class="plus">+</span></button>'
         + '<div class="faq-a">'+escapeHtml(f.a)+'</div></div>';
     }).join("");
+    return '<section id="faq" class="band">'
+      + '<div class="photo-band"><img src="'+IMAGES.vangogh+'" alt="Esther en Martijn"></div>'
+      + '<div class="wrap">'
+      + '<p class="eyebrow">Nog vragen?</p><h2 class="title">Veelgestelde vragen</h2>'
+      + '<p class="faq-updated">'+escapeHtml(CONTENT.faqUpdated)+'</p>'
+      + items
+      + '</div></section>';
+  }
 
   function renderGifts(){
     return '<section id="cadeau" class="band">'
