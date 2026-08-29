@@ -5,6 +5,8 @@
 // auto-detect the classic Pages "functions/" directory convention anymore --
 // an explicit wrangler.jsonc + "main" worker script is the dependable path.
 
+import { EmailMessage } from "cloudflare:email";
+
 function isValidCode(code) {
   return typeof code === "string" && code.length > 0 && code.length < 200;
 }
@@ -122,6 +124,73 @@ async function handleResponsesGet(request, env) {
   });
 }
 
+function sanitizeHeader(value) {
+  return String(value || "").replace(/[\r\n]+/g, " ").trim().slice(0, 200);
+}
+
+async function handleContactPost(request, env) {
+  let body;
+  try {
+    body = await request.json();
+  } catch (e) {
+    return new Response(JSON.stringify({ error: "invalid json" }), {
+      status: 400,
+      headers: { "content-type": "application/json" }
+    });
+  }
+
+  const naam = sanitizeHeader(body && body.naam) || "Onbekende gast";
+  const email = String((body && body.email) || "").trim();
+  const telefoon = sanitizeHeader(body && body.telefoon) || "(niet ingevuld)";
+  const bericht = String((body && body.bericht) || "").trim().slice(0, 3000);
+
+  const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  if (!emailOk || !bericht) {
+    return new Response(JSON.stringify({ error: "invalid input" }), {
+      status: 400,
+      headers: { "content-type": "application/json" }
+    });
+  }
+
+  const subject = "Bericht via de website: " + naam;
+  const plainBody = [
+    "Naam: " + naam,
+    "E-mail: " + email,
+    "Telefoonnummer: " + telefoon,
+    "",
+    "Bericht:",
+    bericht
+  ].join("\n");
+
+  const raw =
+    "From: Bruiloft contactformulier <contactformulier@estherenmartijn.com>\r\n" +
+    "To: e.m.ceremoniemeesters27@gmail.com\r\n" +
+    "Reply-To: " + sanitizeHeader(email) + "\r\n" +
+    "Subject: " + subject + "\r\n" +
+    "Content-Type: text/plain; charset=UTF-8\r\n" +
+    "MIME-Version: 1.0\r\n" +
+    "\r\n" +
+    plainBody;
+
+  try {
+    const msg = new EmailMessage(
+      "contactformulier@estherenmartijn.com",
+      "e.m.ceremoniemeesters27@gmail.com",
+      raw
+    );
+    await env.SEND_EMAIL.send(msg);
+  } catch (e) {
+    return new Response(JSON.stringify({ error: "send failed" }), {
+      status: 502,
+      headers: { "content-type": "application/json" }
+    });
+  }
+
+  return new Response(JSON.stringify({ ok: true }), {
+    headers: { "content-type": "application/json" }
+  });
+}
+
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
@@ -133,8 +202,12 @@ export default {
       return new Response("Method not allowed", { status: 405 });
     }
 
-    if (url.pathname === "/api/responses" && request.method === "GET") {
+        if (url.pathname === "/api/responses" && request.method === "GET") {
       return handleResponsesGet(request, env);
+    }
+
+    if (url.pathname === "/api/contact" && request.method === "POST") {
+      return handleContactPost(request, env);
     }
 
     // Everything else: hand off to the static site files (index.html, style.css, script.js).
