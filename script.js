@@ -402,7 +402,13 @@
     return { start: toHM(parts[0]), end: parts[1] ? toHM(parts[1]) : null };
   }
   function pad2(n){ return (n<10?"0":"")+n; }
-  function buildCalendarUrl(day, item){
+  function fmtLocal(dt){
+    return dt.getFullYear()+pad2(dt.getMonth()+1)+pad2(dt.getDate())+"T"+pad2(dt.getHours())+pad2(dt.getMinutes())+"00";
+  }
+  function fmtUTC(dt){
+    return dt.getUTCFullYear()+pad2(dt.getUTCMonth()+1)+pad2(dt.getUTCDate())+"T"+pad2(dt.getUTCHours())+pad2(dt.getUTCMinutes())+pad2(dt.getUTCSeconds())+"Z";
+  }
+  function getEventTimes(day, item){
     var dateParts = parseDayString(day);
     var times = parseTimeRange(item.time);
     if(!dateParts || !times.start) return null;
@@ -415,18 +421,49 @@
     } else {
       end = new Date(start.getTime() + 2*60*60*1000);
     }
-    function fmt(dt){
-      return dt.getFullYear()+pad2(dt.getMonth()+1)+pad2(dt.getDate())+"T"+pad2(dt.getHours())+pad2(dt.getMinutes())+"00";
-    }
+    return { start: start, end: end };
+  }
+  function buildCalendarUrl(day, item){
+    var t = getEventTimes(day, item);
+    if(!t) return null;
     var params = new URLSearchParams({
       action: "TEMPLATE",
       text: item.title,
-      dates: fmt(start)+"/"+fmt(end),
+      dates: fmtLocal(t.start)+"/"+fmtLocal(t.end),
       details: item.note || "",
       location: item.place + ", " + item.address,
       ctz: "Europe/Amsterdam"
     });
     return "https://www.google.com/calendar/render?" + params.toString();
+  }
+  function escapeICS(s){
+    return String(s||"").replace(/\\/g,"\\\\").replace(/;/g,"\\;").replace(/,/g,"\\,").replace(/\n/g,"\\n");
+  }
+  function utf8ToBase64(str){
+    var bytes = new TextEncoder().encode(str);
+    var binary = "";
+    for(var i=0;i<bytes.length;i++){ binary += String.fromCharCode(bytes[i]); }
+    return btoa(binary);
+  }
+  function buildIcsUrl(day, item){
+    var t = getEventTimes(day, item);
+    if(!t) return null;
+    var uid = (item.key||"event")+"-"+fmtLocal(t.start)+"@estherenmartijn.com";
+    var ics = "BEGIN:VCALENDAR\r\n"
+      + "VERSION:2.0\r\n"
+      + "PRODID:-//Esther en Martijn//Bruiloft//NL\r\n"
+      + "CALSCALE:GREGORIAN\r\n"
+      + "BEGIN:VEVENT\r\n"
+      + "UID:"+uid+"\r\n"
+      + "DTSTAMP:"+fmtUTC(new Date())+"\r\n"
+      + "DTSTART:"+fmtLocal(t.start)+"\r\n"
+      + "DTEND:"+fmtLocal(t.end)+"\r\n"
+      + "SUMMARY:"+escapeICS(item.title)+"\r\n"
+      + "LOCATION:"+escapeICS(item.place + ", " + item.address)+"\r\n"
+      + "DESCRIPTION:"+escapeICS(item.note || "")+"\r\n"
+      + "END:VEVENT\r\n"
+      + "END:VCALENDAR\r\n";
+    return "data:text/calendar;charset=utf-8;base64," + utf8ToBase64(ics);
   }
  
   function renderPhotoBand(){
@@ -454,13 +491,17 @@
       html += '<h3 class="day-heading">'+day.day+'</h3><div class="tl">';
       visibleItems.forEach(function(it){
         var calUrl = buildCalendarUrl(day.day, it);
+        var icsUrl = buildIcsUrl(day.day, it);
         html += '<div class="tl-item">'
           + '<div class="tl-time">'+it.time+'</div>'
           + '<div class="tl-title">'+it.title+'</div>'
           + '<div class="tl-place">'+it.place+'</div>'
           + '<div class="tl-address">'+it.address+'</div>'
           + '<div class="tl-note">'+it.note+'</div>'
-          + (calUrl ? '<a class="cal-link" href="'+calUrl+'" target="_blank" rel="noopener">+ Voeg toe aan agenda</a>' : '')
+          + '<div class="cal-links">'
+          + (calUrl ? '<a class="cal-link" href="'+calUrl+'" target="_blank" rel="noopener">+ Google Agenda</a>' : '')
+          + (icsUrl ? '<a class="cal-link" href="'+icsUrl+'" download="'+(it.key||"event")+'.ics">+ Apple / Outlook</a>' : '')
+          + '</div>'
           + '</div>';
       });
       html += '</div>';
@@ -891,4 +932,3 @@
   init();
   setInterval(tickCountdown, 30000);
 })();
-
