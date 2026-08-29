@@ -72,8 +72,8 @@
   .rings{ margin:22px auto 8px; display:block; }
   .hero-photo-wrap{ position:relative; width:230px; max-width:60vw; margin:26px auto 6px; }
   .duif-behind{
-    position:absolute; left:50%; bottom:20%; width:150%; max-width:none; height:auto;
-    transform:translateX(-50%) rotate(9deg); z-index:0; pointer-events:none;
+    position:absolute; top:50%; left:50%; width:190%; max-width:none; height:auto;
+    transform:translate(-50%,-50%) rotate(9deg); z-index:0; pointer-events:none;
     opacity:.9;
   }
   .hero-photo{
@@ -83,10 +83,11 @@
   }
   .hero-photo img{ display:block; width:100%; height:auto; border-radius:1px; }
   .countdown{
+    position:relative; z-index:2;
     display:flex; gap:22px; justify-content:center; margin:26px 0 8px; flex-wrap:wrap;
   }
   .countdown div{ text-align:center; }
-  .countdown .num{ font-size:2.1rem; font-weight:700; font-variant-numeric:tabular-nums; color:var(--plum); }
+  .countdown .num{ font-size:2.1rem; font-weight:700; font-variant-numeric:tabular-nums; color:#fff; text-shadow:0 1px 4px rgba(51,42,77,.35); }
   .countdown .lbl{ font-size:.72rem; letter-spacing:.1em; text-transform:uppercase; color:var(--pine); }
   .cta{
     display:inline-block; margin-top:22px; padding:12px 30px;
@@ -225,6 +226,4 @@
   .stat{ background:var(--paper); border-radius:14px; padding:14px 20px; min-width:140px; box-shadow:0 4px 12px rgba(51,42,77,.12); }
   .stat .n{ font-size:1.8rem; font-weight:700; color:var(--pine); font-variant-numeric:tabular-nums; }
   .stat .l{ font-size:.72rem; text-transform:uppercase; letter-spacing:.06em; }
- 
-
 
