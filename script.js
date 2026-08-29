@@ -697,10 +697,36 @@
           wireAdminExport();
         })
         .catch(function(){
-          btn.disabled = false;
+                    btn.disabled = false;
           errEl.textContent = "Dat wachtwoord klopt niet (of er ging iets mis bij het ophalen).";
         });
     });
+  }
+
+  var scrollSpyObserver = null;
+  function wireScrollSpy(){
+    if(scrollSpyObserver){ scrollSpyObserver.disconnect(); scrollSpyObserver = null; }
+    if(!("IntersectionObserver" in window)) return;
+    var navLinks = document.querySelectorAll(".nav-inner a");
+    if(!navLinks.length) return;
+    var pairs = [];
+    navLinks.forEach(function(link){
+      var id = (link.getAttribute("href") || "").replace("#", "");
+      var section = id ? document.getElementById(id) : null;
+      if(section) pairs.push({ link: link, section: section });
+    });
+    if(!pairs.length) return;
+    function setActive(id){
+      pairs.forEach(function(p){
+        p.link.classList.toggle("active-link", p.section.id === id);
+      });
+    }
+    scrollSpyObserver = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting) setActive(entry.target.id);
+      });
+    }, { rootMargin: "-40% 0px -55% 0px", threshold: 0 });
+    pairs.forEach(function(p){ scrollSpyObserver.observe(p.section); });
   }
 
   function render(){
@@ -716,8 +742,10 @@
       return;
     }
     var guest = currentGuest || (previewTag ? { code:"__preview__", naam:"Voorbeeldgast", tag:previewTag } : null);
-    app.innerHTML = renderPhotoBand() + renderHero() + renderProgramme() + renderRsvpForm(guest) + renderContact() + renderFaq() + renderGifts() + renderFooter();    tickCountdown();
+      app.innerHTML = renderPhotoBand() + renderHero() + renderProgramme() + renderRsvpForm(guest) + renderContact() + renderFaq() + renderGifts() + renderFooter();
+    tickCountdown();
     wireInteractions(guest);
+    wireScrollSpy();
   }
 
   function wireInteractions(guest){
