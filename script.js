@@ -106,7 +106,9 @@
     ],
     faqUpdated: "laatste update 26 aug",
     giftIntro: "Jullie aanwezigheid is het mooiste cadeau dat we ons kunnen wensen!",
-    giftBody: "Maar mocht je toch iets willen geven, dan hebben we een verlanglijstje."
+    giftBody: "Maar mocht je toch iets willen geven, dan hebben we een verlanglijstje.",
+    contactTitle: "Contact met de ceremoniemeesters",
+    contactIntro: "Heb je een vraag, wil je iets doorgeven voor de dag zelf, of gewoon nog iets kwijt aan de ceremoniemeesters? Laat het hieronder weten, dan nemen we contact met je op."
   };
 
   function el(html){ var t=document.createElement("template"); t.innerHTML=html.trim(); return t.content.firstElementChild; }
@@ -324,7 +326,25 @@
     return CONTENT.tagAttends[tag] && CONTENT.tagAttends[tag].indexOf("receptie") !== -1;
   }
 
-   function renderFaq(){
+  function renderContact(){
+    if(!guestAttendsReceptie()) return "";
+    return '<section id="contact" class="band"><div class="wrap">'
+      + '<p class="eyebrow">Nog iets kwijt?</p><h2 class="title">'+escapeHtml(CONTENT.contactTitle)+'</h2>'
+      + '<p class="hint">'+escapeHtml(CONTENT.contactIntro)+'</p>'
+      + '<form class="card" id="contact-form" novalidate>'
+      + '<div class="field"><label class="req" for="c-email">E-mailadres</label>'
+      + '<input type="email" id="c-email" placeholder="jij@voorbeeld.nl"></div>'
+      + '<div class="field"><label for="c-phone">Telefoonnummer (optioneel)</label>'
+      + '<input type="tel" id="c-phone" placeholder="optioneel"></div>'
+      + '<div class="field"><label class="req" for="c-message">Je bericht</label>'
+      + '<textarea id="c-message" placeholder="Waar kunnen we je mee helpen?"></textarea></div>'
+      + '<button type="submit" class="submit-btn">Versturen</button>'
+      + '<div class="form-msg" id="contact-msg" role="status"></div>'
+      + '</form>'
+      + '</div></section>';
+  }
+
+  function renderFaq(){
     var visibleFaq = CONTENT.faq.filter(function(f){
       return !f.onlyReceptie || guestAttendsReceptie();
     });
@@ -449,6 +469,55 @@
     });
   }
 
+  function wireContact(){
+    var form = document.getElementById("contact-form");
+    if(!form) return;
+    form.addEventListener("submit", function(ev){
+      ev.preventDefault();
+      var msgEl = document.getElementById("contact-msg");
+      var btn = form.querySelector(".submit-btn");
+      var email = document.getElementById("c-email").value.trim();
+      var telefoon = document.getElementById("c-phone").value.trim();
+      var bericht = document.getElementById("c-message").value.trim();
+      var emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+      if(!emailOk || !bericht){
+        msgEl.textContent = "Vul een geldig e-mailadres en een bericht in.";
+        msgEl.className = "form-msg err";
+        return;
+      }
+      btn.disabled = true;
+      msgEl.textContent = "Bezig met versturen…";
+      msgEl.className = "form-msg";
+      fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          code: currentGuest ? currentGuest.code : "",
+          naam: currentGuest ? currentGuest.naam : "",
+          email: email,
+          telefoon: telefoon,
+          bericht: bericht
+        })
+      }).then(function(r){
+        return r.ok;
+      }).then(function(ok){
+        btn.disabled = false;
+        if(ok){
+          form.reset();
+          msgEl.textContent = "Bedankt! Je bericht is verstuurd.";
+          msgEl.className = "form-msg ok";
+        } else {
+          msgEl.textContent = "Versturen lukte niet. Probeer het zo nog eens.";
+          msgEl.className = "form-msg err";
+        }
+      }).catch(function(){
+        btn.disabled = false;
+        msgEl.textContent = "Versturen lukte niet (geen verbinding). Probeer het zo nog eens.";
+        msgEl.className = "form-msg err";
+      });
+    });
+  }
+
   function renderAdminGate(){
     return '<div class="admin-gate">'
       + '<p class="glabel">Alleen voor het bruidspaar</p>'
@@ -504,8 +573,7 @@
       return;
     }
     var guest = currentGuest || (previewTag ? { code:"__preview__", naam:"Voorbeeldgast", tag:previewTag } : null);
-    app.innerHTML = renderPhotoBand() + renderHero() + renderProgramme() + renderRsvpForm(guest) + renderFaq() + renderGifts() + renderFooter();
-    tickCountdown();
+    app.innerHTML = renderPhotoBand() + renderHero() + renderProgramme() + renderRsvpForm(guest) + renderContact() + renderFaq() + renderGifts() + renderFooter();    tickCountdown();
     wireInteractions(guest);
   }
 
@@ -516,11 +584,11 @@
         var open = item.getAttribute("data-open") === "true";
         document.querySelectorAll(".faq-item").forEach(function(i){ i.setAttribute("data-open","false"); });
         item.setAttribute("data-open", open ? "false" : "true");
-      });
+           });
     });
+    wireContact();
     var form = document.getElementById("rsvp-form");
     if(!form || !guest || guest.code === "__preview__") return;
-
     var attendance = {};
     form.querySelectorAll(".toggle-row").forEach(function(row){
       var evKey = row.getAttribute("data-event");
