@@ -304,7 +304,7 @@
   function renderNameGate(idSuffix, heading){
     return '<div class="name-gate">'
       + '<p class="glabel">'+escapeHtml(heading || "Wie ben jij?")+'</p>'
-      + '<p class="hint">Vul je voor- en achternaam in zoals op de uitnodiging, dan laten we jouw programma en RSVP zien.</p>'
+      + '<p class="hint">Vul je voor- en achternaam in, dan laten we jouw programma en RSVP zien.</p>'
       + '<form class="name-gate-form" data-ctx="'+idSuffix+'">'
       + '<input type="text" class="name-gate-input" placeholder="Voor- en achternaam" autocomplete="name">'
       + '<button type="submit" class="submit-btn">Bekijken</button>'
@@ -338,7 +338,7 @@
             if(target) target.scrollIntoView({behavior:"smooth", block:"start"});
           });
         } else {
-          errEl.textContent = "We kunnen deze naam niet vinden op de gastenlijst. Check de spelling, of typ je naam precies zoals op de uitnodiging.";
+          errEl.textContent = "We kunnen deze naam niet vinden op de gastenlijst. Check de spelling, of vraag Esther even.";
         }
       });
     });
@@ -358,7 +358,7 @@
     var target = new Date(CONTENT.weddingDateISO).getTime();
     var guestLine = "";
     if(currentGuest){
-      guestLine = '<p class="guestbar"><span class="who">Welkom, '+escapeHtml(currentGuest.naam)+'</span><br>Wees welkom tijdens: <strong>'+escapeHtml(CONTENT.tagLabels[currentGuest.tag])+'</strong><br><a href="#" id="switch-guest" class="switch-link">Niet jouw naam? Wissel van gast</a></p>';
+      guestLine = '<p class="guestbar"><span class="who">Welkom, '+escapeHtml(currentGuest.naam)+'</span><br>Wees welkom tijdens: <strong>'+escapeHtml(CONTENT.tagLabels[currentGuest.tag])+'</strong><br><a href="#" id="switch-guest" class="switch-link">Niet jouw naam? Klik hier</a></p>';
     } else {
       guestLine = renderNameGate("hero", "Wie ben jij?");
     }
