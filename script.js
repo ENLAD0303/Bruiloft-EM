@@ -5,7 +5,8 @@
     hero: "hero.jpg",
     grid: "grid.jpg",
     vangogh: "vangogh.jpg",
-    vintage: "vintage.jpg"
+    vintage: "vintage.jpg",
+    logo: "logo-duif.png"
   };
  
     var GUESTS = [
@@ -204,6 +205,7 @@
     welcomeText: "Wij gaan trouwen!? Wat de flip!! Hoe fijn dat wij ons grote feest met jou mogen vieren! Hier lees je meer over wat de dag inhoudt — en vergeet niet te RSVP’en :)",
     rsvpDeadlineText: "Laat het ons alsjeblieft vóór 22 maart 2027 weten!",
     programmeNote: "Dit is het programma zoals het er nu voor staat — de tijden zijn nog niet helemaal definitief. Kom gerust nog eens terug op deze pagina voor de laatste versie!",
+    coupleNote: "Kom je met zijn tweeën (of als gezin)? Vul dit formulier dan allebei apart in met je eigen naam, zodat we van iedereen weten of diegene erbij is.",
     tagLabels: {
       stadhuis: "Alle festiviteiten!",
       dag: "Diner, kerk en receptie!",
@@ -238,9 +240,9 @@
       { q:"Hoe kom ik bij de kerk?", a:"1. Parkeer bij een P+R en reis met het OV de stad in.\n2. Huur een OV-fiets vanaf Amsterdam Centraal of Amstel station en fiets een minuutje of 15." },
       { q:"Hoe kom ik bij de receptielocatie?", a:"Vanaf de kerk loop je in ongeveer 20 minuten naar de receptielocatie. Geen zin om te lopen? Pak dan tram 1, 7 of 19 vanaf halte Rijksmuseum naar Weesperplein. Daarvandaan is het nog tien minuten lopen, of pak daar de metro richting Amsterdam centraal station en stap uit bij Waterlooplein.", onlyReceptie:true},
       { q:"Is er een dresscode?", a:"Later meer informatie!" },
-      { q:"Hoe bereik ik de ceremoniemeesters?", a:"Mail gerust naar e.m.ceremoniemeesters27@gmail.com, dan nemen ze contact met je op." }
+      { q:"Ik heb nog een vraag, hoe bereik ik de ceremoniemeesters?", a:"Mail gerust naar e.m.ceremoniemeesters27@gmail.com, dan nemen we contact met je op." }
     ],
-    faqUpdated: "laatste update 29 aug",
+    faqUpdated: "laatste update 26 aug",
     giftIntro: "Jullie aanwezigheid is het mooiste cadeau dat we ons kunnen wensen!",
     giftBody: "Maar mocht je toch iets willen geven, dan hebben we een verlanglijstje.",
     contactTitle: "Contact met de ceremoniemeesters",
@@ -366,11 +368,11 @@
     }
     return '<section class="hero" id="welkom">'
       + '<div class="wrap">'
-      + '<div class="hero-photo"><img src="'+IMAGES.hero+'" alt="Esther en Martijn"></div>'
+      + '<div class="hero-photo-wrap"><img class="duif-behind" src="'+IMAGES.logo+'" alt="" aria-hidden="true"><div class="hero-photo"><img src="'+IMAGES.hero+'" alt="Esther en Martijn"></div></div>'
       + '<div class="countdown" id="countdown" data-target="'+target+'"></div>'
-      + '<a class="cta" href="#rsvp">RSVP</a>'
       + '<p class="welcome-text">'+escapeHtml(CONTENT.welcomeText)+'</p>'
       + guestLine
+      + '<div class="scroll-hint"><span>Scroll voor het hele verhaal</span><span class="arrow">&darr;</span></div>'
       + '</div></section>';
   }
  
@@ -517,6 +519,7 @@
     if(!guest){
       return '<section id="rsvp" class="band"><div class="wrap">'
         + '<p class="eyebrow">Doe je mee?</p><h2 class="title">RSVP</h2>'
+        + '<p class="hint">'+CONTENT.coupleNote+'</p>'
         + renderNameGate("rsvp", "Vul je naam in om te RSVP'en")
         + '<p class="hint">'+CONTENT.rsvpDeadlineText+'</p>'
         + '</div></section>';
@@ -536,6 +539,7 @@
       + '<input type="text" id="f-diet" placeholder="bijv. vegetarisch, notenallergie, geen" value="'+escapeHtml(existing?existing.diet:"")+'"></div>' : "";
     return '<section id="rsvp" class="band"><div class="wrap">'
       + '<p class="eyebrow">Doe je mee?</p><h2 class="title">RSVP</h2>'
+      + '<p class="hint">'+CONTENT.coupleNote+'</p>'
       + '<p class="hint">'+CONTENT.rsvpDeadlineText+'</p>'
       + '<form class="card" id="rsvp-form" novalidate>'
       + '<p class="glabel">Naam</p><p style="margin-top:-8px;font-weight:700;">'+escapeHtml(guest.naam)+'</p>'
@@ -911,7 +915,7 @@
         submitBtn.disabled = false;
         if(ok){
           CURRENT_RESPONSE = response;
-          msgEl.textContent = "Bedankt! Jouw RSVP is opgeslagen.";
+          msgEl.textContent = "Bedankt! Jullie RSVP is opgeslagen.";
           msgEl.className = "form-msg ok";
         } else {
           msgEl.textContent = "Opslaan lukte niet. Probeer het zo nog eens.";
@@ -939,7 +943,6 @@
  
 
 
- 
   init();
   setInterval(tickCountdown, 30000);
 })();
