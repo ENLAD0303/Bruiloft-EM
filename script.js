@@ -911,7 +911,7 @@
         submitBtn.disabled = false;
         if(ok){
           CURRENT_RESPONSE = response;
-          msgEl.textContent = "Bedankt! Jullie RSVP is opgeslagen.";
+          msgEl.textContent = "Bedankt! Jouw RSVP is opgeslagen.";
           msgEl.className = "form-msg ok";
         } else {
           msgEl.textContent = "Opslaan lukte niet. Probeer het zo nog eens.";
