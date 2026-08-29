@@ -283,7 +283,7 @@
   function renderRsvpForm(guest){
     if(!guest){
       return '<section id="rsvp" class="band"><div class="wrap">'
-        + '<p class="eyebrow">Doe je mee?</p><h2 class="title">RSVP</h2>'
+        + '<p class="eyebrow">Ben je erbij?</p><h2 class="title">RSVP</h2>'
         + renderNameGate("rsvp", "Vul je naam in om te RSVP'en")
         + '<p class="hint">'+CONTENT.rsvpDeadlineText+'</p>'
         + '</div></section>';
