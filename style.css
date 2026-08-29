@@ -42,7 +42,8 @@
     color:var(--pine); text-decoration:none; letter-spacing:.02em;
     border-bottom:2px solid transparent; padding-bottom:1px;
   }
-  .nav-inner a:hover, .nav-inner a:focus-visible{ border-bottom-color:var(--rust); }
+    .nav-inner a:hover, .nav-inner a:focus-visible{ border-bottom-color:var(--rust); }
+  .nav-inner a.active-link{ border-bottom-color:var(--rust); }
   a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible{
     outline:3px solid var(--rust); outline-offset:2px;
   }
