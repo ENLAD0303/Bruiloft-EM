@@ -108,7 +108,7 @@
     giftIntro: "Jullie aanwezigheid is het mooiste cadeau dat we ons kunnen wensen!",
     giftBody: "Maar mocht je toch iets willen geven, dan hebben we een verlanglijstje.",
     contactTitle: "Contact met de ceremoniemeesters",
-    contactIntro: "Heb je een vraag, wil je iets doorgeven voor de dag zelf, of gewoon nog iets kwijt aan de ceremoniemeesters? Laat het hieronder weten, dan nemen we contact met je op."
+    contactIntro: "Heb je een vraag, wil je iets doorgeven voor de dag zelf, of gewoon nog iets kwijt aan de ceremoniemeesters? Laat het hieronder weten, dan nemen zij contact met je op."
   };
 
   function el(html){ var t=document.createElement("template"); t.innerHTML=html.trim(); return t.content.firstElementChild; }
