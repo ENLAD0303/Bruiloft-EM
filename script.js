@@ -14,7 +14,7 @@
     { "code": "test-dag", "naam": "Test Daggast", "tag": "dag" },
     { "code": "test-kerkreceptie", "naam": "Test Kerkreceptie", "tag": "kerkreceptie" },
     { "code": "test-kerk", "naam": "Test Kerk", "tag": "kerk" },
-    { "code": "esther-dijkman", "naam": "Esther Dijkman", "tag": "stadhuis", "partners": ["martijn-spierenburg"] },
+    { "code": "esther-dijkman", "naam": "Esther Dijkman", "tag": "stadhuis" },
     { "code": "eddy-dijkman", "naam": "Eddy Dijkman", "tag": "stadhuis" },
     { "code": "jonathan-dijkman", "naam": "Jonathan Dijkman", "tag": "stadhuis" },
     { "code": "david-dijkman", "naam": "David Dijkman", "tag": "stadhuis", "partners": ["lisa-berghorst"] },
@@ -22,7 +22,7 @@
     { "code": "lise-klapwijk", "naam": "Lise Klapwijk", "tag": "stadhuis" },
     { "code": "esther-nanlohy", "naam": "Esther Nanlohy", "tag": "stadhuis" },
     { "code": "saffira-frantzen", "naam": "Saffira Frantzen", "tag": "stadhuis" },
-    { "code": "martijn-spierenburg", "naam": "Martijn Spierenburg", "tag": "stadhuis", "partners": ["esther-dijkman"] },
+    { "code": "martijn-spierenburg", "naam": "Martijn Spierenburg", "tag": "stadhuis" },
     { "code": "peter-spierenburg", "naam": "Peter Spierenburg", "tag": "stadhuis", "partners": ["arine-spierenburg"] },
     { "code": "arine-spierenburg", "naam": "Arine Spierenburg", "tag": "stadhuis", "partners": ["peter-spierenburg"] },
     { "code": "carien-zaalmink", "naam": "Carien Zaalmink", "tag": "stadhuis", "partners": ["bram-zaalmink"] },
@@ -205,7 +205,7 @@
     welcomeText: "Wij gaan trouwen!? Wat de flip!! Hoe fijn dat wij ons grote feest met jou mogen vieren! Hier lees je meer over wat de dag inhoudt — en vergeet niet te RSVP’en :)",
     rsvpDeadlineText: "Laat het ons alsjeblieft vóór 22 maart 2027 weten!",
     programmeNote: "Dit is het programma zoals het er nu voor staat — de tijden zijn nog niet helemaal definitief. Kom gerust nog eens terug op deze pagina voor de laatste versie!",
-    coupleNote: "Iedereen moet aangemeld zijn, dus zijn jij en je partner uitgenodigd, log dan beide met je eigen naam in en vul de rsvp in.",
+    coupleNote: "Kom je met zijn tweeën (of als gezin)? Vul dit formulier dan allebei apart in met je eigen naam, zodat we van iedereen weten of diegene erbij is.",
     tagLabels: {
       stadhuis: "Alle festiviteiten!",
       dag: "Diner, kerk en receptie!",
@@ -240,13 +240,13 @@
       { q:"Hoe kom ik bij de kerk?", a:"1. Parkeer bij een P+R en reis met het OV de stad in.\n2. Huur een OV-fiets vanaf Amsterdam Centraal of Amstel station en fiets een minuutje of 15." },
       { q:"Hoe kom ik bij de receptielocatie?", a:"Vanaf de kerk loop je in ongeveer 20 minuten naar de receptielocatie. Geen zin om te lopen? Pak dan tram 1, 7 of 19 vanaf halte Rijksmuseum naar Weesperplein. Daarvandaan is het nog tien minuten lopen, of pak daar de metro richting Amsterdam centraal station en stap uit bij Waterlooplein.", onlyReceptie:true},
       { q:"Is er een dresscode?", a:"Later meer informatie!" },
-      { q:"Hoe bereik ik de ceremoniemeesters?", a:"Mail gerust naar e.m.ceremoniemeesters27@gmail.com, dan nemen zij contact met je op." }
+      { q:"Ik heb nog een vraag, hoe bereik ik de ceremoniemeesters?", a:"Mail gerust naar e.m.ceremoniemeesters27@gmail.com, dan nemen we contact met je op." }
     ],
-    faqUpdated: "laatste update 29 aug",
+    faqUpdated: "laatste update 26 aug",
     giftIntro: "Jullie aanwezigheid is het mooiste cadeau dat we ons kunnen wensen!",
     giftBody: "Maar mocht je toch iets willen geven, dan hebben we een verlanglijstje.",
     contactTitle: "Contact met de ceremoniemeesters",
-    contactIntro: "Heb je een vraag, wil je iets doorgeven voor de dag zelf, of  nog iets kwijt aan de ceremoniemeesters? Laat het hieronder weten, dan nemen ze contact met je op."
+    contactIntro: "Heb je een vraag, wil je iets doorgeven voor de dag zelf, of gewoon nog iets kwijt aan de ceremoniemeesters? Laat het hieronder weten, dan nemen we contact met je op."
   };
  
   function el(html){ var t=document.createElement("template"); t.innerHTML=html.trim(); return t.content.firstElementChild; }
@@ -309,7 +309,7 @@
   function renderNameGate(idSuffix, heading){
     return '<div class="name-gate">'
       + '<p class="glabel">'+escapeHtml(heading || "Wie ben jij?")+'</p>'
-      + '<p class="hint">Vul je voor- en achternaam in om het programma en RSVP formulier te zien.</p>'
+      + '<p class="hint">Vul je voor- en achternaam in zoals op de uitnodiging, dan laten we jouw programma en RSVP zien.</p>'
       + '<form class="name-gate-form" data-ctx="'+idSuffix+'">'
       + '<input type="text" class="name-gate-input" placeholder="Voor- en achternaam" autocomplete="name">'
       + '<button type="submit" class="submit-btn">Bekijken</button>'
@@ -367,7 +367,7 @@
             if(target) target.scrollIntoView({behavior:"smooth", block:"start"});
           });
         } else {
-          errEl.textContent = "We kunnen deze naam niet vinden op de gastenlijst. Check de spelling, of bericht Esther even als inloggen niet lukt.";
+          errEl.textContent = "We kunnen deze naam niet vinden op de gastenlijst. Check de spelling, of typ je naam precies zoals op de uitnodiging.";
         }
       });
     });
@@ -623,7 +623,7 @@
         + '<div class="faq-a">'+escapeHtml(f.a)+'</div></div>';
     }).join("");
     return '<section id="faq" class="band">'
-      + '<div class="photo-band"><img src="'+IMAGES.vangogh+'" alt="Esther en Martijn"></div>'
+      + '<div class="photo-band faq-band"><img src="'+IMAGES.vangogh+'" alt="Esther en Martijn"></div>'
       + '<div class="wrap">'
       + '<p class="eyebrow">Nog vragen?</p><h2 class="title">Veelgestelde vragen</h2>'
       + '<p class="faq-updated">'+escapeHtml(CONTENT.faqUpdated)+'</p>'
@@ -968,6 +968,7 @@
   setInterval(tickCountdown, 30000);
 })();
  
+
 
 
 
