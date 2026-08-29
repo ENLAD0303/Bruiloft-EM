@@ -3,7 +3,7 @@
   "main": "worker.js",
   "compatibility_date": "2025-01-01",
   "vars": {
-    "ADMIN_PASSWORD": "Jopie&Muiszijnnietpluis"
+    "ADMIN_PASSWORD": "..."
   },
   "assets": {
     "directory": "./",
@@ -15,5 +15,8 @@
       "database_name": "wedding-rsvp",
       "database_id": "5adf4620-9a3f-47e8-a9ac-1f1cbc6e238a"
     }
+  ],
+  "send_email": [
+    { "name": "SEND_EMAIL", "destination_address": "e.m.ceremoniemeesters27@gmail.com" }
   ]
 }
