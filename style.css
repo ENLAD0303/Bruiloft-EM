@@ -39,6 +39,9 @@
     max-width:760px; margin:0 auto; padding:14px 24px;
     display:flex; flex-wrap:wrap; gap:6px 20px; justify-content:center;
   }
+  @media (min-width: 900px){
+    .nav-inner{ max-width:900px; }
+  }
   .nav-inner a{
     font-family:"Caveat", cursive; font-weight:700; font-size:1.35rem;
     color:var(--pine); text-decoration:none; letter-spacing:.02em;
@@ -226,4 +229,6 @@
   .stat{ background:var(--paper); border-radius:14px; padding:14px 20px; min-width:140px; box-shadow:0 4px 12px rgba(51,42,77,.12); }
   .stat .n{ font-size:1.8rem; font-weight:700; color:var(--pine); font-variant-numeric:tabular-nums; }
   .stat .l{ font-size:.72rem; text-transform:uppercase; letter-spacing:.06em; }
+ 
+
 
