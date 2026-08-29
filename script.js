@@ -126,8 +126,17 @@
   function findGuestByName(name){
     var norm = normalizeName(name);
     if(!norm) return null;
-    var m = GUESTS.filter(function(g){ return normalizeName(g.naam) === norm; });
-    return m[0] || null;
+    var exact = GUESTS.filter(function(g){ return normalizeName(g.naam) === norm; });
+    if(exact.length === 1) return exact[0];
+    if(exact.length > 1) return null;
+    // Fallback: voor gasten van wie we alleen de voornaam weten (naam-veld is één woord),
+    // maakt het niet uit wat iemand als achternaam invult (of niets) -- we matchen dan op voornaam.
+    var firstWord = norm.split(" ")[0];
+    var byFirstName = GUESTS.filter(function(g){
+      var gNorm = normalizeName(g.naam);
+      return gNorm.indexOf(" ") === -1 && gNorm === firstWord;
+    });
+    return byFirstName.length === 1 ? byFirstName[0] : null;
   }
 
   var previewTag = null; // when set (via ?preview=..., not shown in the UI), used to spot-check a tag's view
