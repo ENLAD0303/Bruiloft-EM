@@ -463,6 +463,10 @@
       + '</div></section>';
   }
 
+  function renderRsvpPhoto(){
+    return '<div class="photo-band"><img src="IMG_4696.jpeg" alt="Esther en Martijn op de schommel"></div>';
+  }
+
  function guestAttendsReceptie(){
     var tag = currentGuest ? currentGuest.tag : previewTag;
     if(!tag) return true;
@@ -742,8 +746,7 @@
       return;
     }
     var guest = currentGuest || (previewTag ? { code:"__preview__", naam:"Voorbeeldgast", tag:previewTag } : null);
-      app.innerHTML = renderPhotoBand() + renderHero() + renderProgramme() + renderRsvpForm(guest) + renderContact() + renderFaq() + renderGifts() + renderFooter();
-    tickCountdown();
+    app.innerHTML = renderPhotoBand() + renderHero() + renderProgramme() + renderRsvpForm(guest) + renderRsvpPhoto() + renderContact() + renderFaq() + renderGifts() + renderFooter();    tickCountdown();
     wireInteractions(guest);
     wireScrollSpy();
   }
