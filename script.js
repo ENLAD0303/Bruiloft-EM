@@ -204,8 +204,8 @@
     weddingDateISO: "2027-05-22T15:00:00+02:00",
     welcomeText: "Wij gaan trouwen!? Wat de flip!! Hoe fijn dat wij ons grote feest met jou mogen vieren! Hier lees je meer over wat de dag inhoudt — en vergeet niet te RSVP’en :)",
     rsvpDeadlineText: "Laat het ons alsjeblieft vóór 22 maart 2027 weten!",
-    programmeNote: "Dit is het programma zoals het er nu voor staat — de tijden zijn nog niet helemaal definitief. Kom gerust nog eens terug op deze pagina voor de laatste versie!",
-    coupleNote: "Kom je met zijn tweeën (of als gezin)? Vul dit formulier dan allebei apart in met je eigen naam, zodat we van iedereen weten of diegene erbij is.",
+    programmeNote: "De tijden van het programma zijn nog volledig definitief. Hou deze pagina dus voor de bruiloft in de gaten voor de juiste tijden!",
+    coupleNote: "Zijn jij en je partner beide uitgenodigd? Zorg er dan voor dat je beide inlogt met je naam en RSVP't zodat voor ons duidelijk is dat jullie beiden komen. Dankjewel!",
     tagLabels: {
       stadhuis: "Alle festiviteiten!",
       dag: "Diner, kerk en receptie!",
@@ -240,13 +240,13 @@
       { q:"Hoe kom ik bij de kerk?", a:"1. Parkeer bij een P+R en reis met het OV de stad in.\n2. Huur een OV-fiets vanaf Amsterdam Centraal of Amstel station en fiets een minuutje of 15." },
       { q:"Hoe kom ik bij de receptielocatie?", a:"Vanaf de kerk loop je in ongeveer 20 minuten naar de receptielocatie. Geen zin om te lopen? Pak dan tram 1, 7 of 19 vanaf halte Rijksmuseum naar Weesperplein. Daarvandaan is het nog tien minuten lopen, of pak daar de metro richting Amsterdam centraal station en stap uit bij Waterlooplein.", onlyReceptie:true},
       { q:"Is er een dresscode?", a:"Later meer informatie!" },
-      { q:"Ik heb nog een vraag, hoe bereik ik de ceremoniemeesters?", a:"Mail gerust naar e.m.ceremoniemeesters27@gmail.com, dan nemen we contact met je op." }
+      { q:"Hoe bereik ik de ceremoniemeesters?", a:"Mail naar e.m.ceremoniemeesters27@gmail.com, dan nemen zij contact met je op." }
     ],
     faqUpdated: "laatste update 26 aug",
     giftIntro: "Jullie aanwezigheid is het mooiste cadeau dat we ons kunnen wensen!",
     giftBody: "Maar mocht je toch iets willen geven, dan hebben we een verlanglijstje.",
     contactTitle: "Contact met de ceremoniemeesters",
-    contactIntro: "Heb je een vraag, wil je iets doorgeven voor de dag zelf, of gewoon nog iets kwijt aan de ceremoniemeesters? Laat het hieronder weten, dan nemen we contact met je op."
+    contactIntro: "Heb je vragen voor de ceremoniemeesters? Laat het hieronder weten, dan nemen zij contact met je op."
   };
  
   function el(html){ var t=document.createElement("template"); t.innerHTML=html.trim(); return t.content.firstElementChild; }
@@ -309,7 +309,7 @@
   function renderNameGate(idSuffix, heading){
     return '<div class="name-gate">'
       + '<p class="glabel">'+escapeHtml(heading || "Wie ben jij?")+'</p>'
-      + '<p class="hint">Vul je voor- en achternaam in zoals op de uitnodiging, dan laten we jouw programma en RSVP zien.</p>'
+      + '<p class="hint">Vul je voor- en achternaam in, zodat het programma en RSVP formulier zichtbaar wordt.</p>'
       + '<form class="name-gate-form" data-ctx="'+idSuffix+'">'
       + '<input type="text" class="name-gate-input" placeholder="Voor- en achternaam" autocomplete="name">'
       + '<button type="submit" class="submit-btn">Bekijken</button>'
@@ -367,7 +367,7 @@
             if(target) target.scrollIntoView({behavior:"smooth", block:"start"});
           });
         } else {
-          errEl.textContent = "We kunnen deze naam niet vinden op de gastenlijst. Check de spelling, of typ je naam precies zoals op de uitnodiging.";
+          errEl.textContent = "We kunnen deze naam niet vinden op de gastenlijst. Check de spelling, of neem contact op met Esther als je er niet uitkomt.";
         }
       });
     });
@@ -398,7 +398,7 @@
       + '<div class="countdown" id="countdown" data-target="'+target+'"></div>'
       + '<p class="welcome-text">'+escapeHtml(CONTENT.welcomeText)+'</p>'
       + guestLine
-      + '<div class="scroll-hint"><span>Scroll voor het hele verhaal</span><span class="arrow">&darr;</span></div>'
+      + '<div class="scroll-hint"><span>Blijf scrollen</span><span class="arrow">&darr;</span></div>'
       + '</div></section>';
   }
  
@@ -572,7 +572,7 @@
       + '<p class="glabel">Naam</p><p style="margin-top:-8px;font-weight:700;">'+escapeHtml(guest.naam)+'</p>'
       + toggles
       + dietField
-      + '<div class="field"><label for="f-msg">Vragen, opmerkingen, of wat te melden? Laat hier een berichtje achter.</label>'
+      + '<div class="field"><label for="f-msg">Vragen, opmerkingen, of wat te melden aan het bruidspaar? Laat hier een berichtje achter.</label>'
       + '<textarea id="f-msg" placeholder="optioneel">'+escapeHtml(existing?existing.bericht:"")+'</textarea></div>'
       + '<div class="field"><label for="f-fun">Voor de lol: waar moeten wij heen op huwelijksreis?</label>'
       + '<input type="text" id="f-fun" placeholder="optioneel, alle tips welkom" value="'+escapeHtml(existing?existing.honeymoon:"")+'"></div>'
@@ -643,7 +643,7 @@
  
   function renderFooter(){
     return '<footer><div class="wrap">Tot op 21 &amp; 22 mei 2027! &mdash; '+CONTENT.coupleNames[0]+' &amp; '+CONTENT.coupleNames[1]
-      + '<br><span class="hint">Deze website wordt regelmatig bijgewerkt — kom gerust nog eens terug voor de laatste informatie.</span>'
+      + '<br><span class="hint">Deze website wordt regelmatig bijgewerkt, kom nog eens terug voor de laatste updates.</span>'
       + '<br><a href="?beheer=1">voor het bruidspaar</a></div></footer>';
   }
  
