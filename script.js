@@ -735,7 +735,9 @@
 
   function render(){
     var app = document.getElementById("app");
+    var navEl = document.querySelector(".nav");
     if(isAdmin){
+      if(navEl) navEl.style.display = "none";
       if(!ADMIN_UNLOCKED){
         app.innerHTML = renderAdminGate();
         wireAdminGate();
@@ -745,6 +747,7 @@
       }
       return;
     }
+    if(navEl) navEl.style.display = "";
     var guest = currentGuest || (previewTag ? { code:"__preview__", naam:"Voorbeeldgast", tag:previewTag } : null);
     app.innerHTML = renderPhotoBand() + renderHero() + renderProgramme() + renderRsvpForm(guest) + renderRsvpPhoto() + renderContact() + renderFaq() + renderGifts() + renderFooter();    tickCountdown();
     wireInteractions(guest);
