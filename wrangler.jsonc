@@ -3,7 +3,7 @@
   "main": "worker.js",
   "compatibility_date": "2025-01-01",
   "vars": {
-    "ADMIN_PASSWORD": "..."
+    "ADMIN_PASSWORD": "Mallerd2027"
   },
   "assets": {
     "directory": "./",
