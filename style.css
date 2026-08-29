@@ -27,8 +27,8 @@
 
   /* ---- shell / nav ---- */
   #shell{ position:relative; z-index:5; }
-  .brandmark{ text-align:center; padding:18px 0 4px; background:var(--lilac); }
-  .brandmark img{ width:140px; height:auto; display:inline-block; }
+ .brandmark{ text-align:center; padding:14px 0 2px; background:var(--lilac); }
+ .brandmark img{ width:64px; height:auto; display:inline-block; }
   .nav{
     position:sticky; top:0; z-index:20;
     background:rgba(228,222,251,.92);
