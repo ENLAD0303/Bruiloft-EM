@@ -202,7 +202,7 @@
   .photo-band{ width:100%; line-height:0; position:relative; overflow:hidden; }
   .photo-band img{ width:100%; height:auto; display:block; }
   .photo-band.hero-band img{ filter:brightness(.6); }
-  .photo-band.faq-band img{ height:clamp(260px, 34vw, 440px); object-fit:cover; object-position:center 100%; }
+  .photo-band.faq-band img{ height:clamp(260px, 34vw, 440px); object-fit:cover; object-position:center 26%; }
   .hero-band-overlay{
     position:absolute; inset:0; display:flex; flex-direction:column;
     align-items:center; justify-content:center; text-align:center;
