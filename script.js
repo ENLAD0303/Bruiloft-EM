@@ -552,7 +552,7 @@
  
   function renderRsvpPhoto(){
     if(!guestAttendsReceptie()) return "";
-    return '<div class="photo-band"><img src="schommelfoto.jpg" alt="Esther en Martijn op de schommel"></div>';
+    return '<div class="photo-band"><img src="IMG_4696.jpeg" alt="Esther en Martijn op de schommel"></div>';
   }
  
  function guestAttendsReceptie(){
@@ -934,5 +934,7 @@
   setInterval(tickCountdown, 30000);
 })();
  
+
+
 
 
