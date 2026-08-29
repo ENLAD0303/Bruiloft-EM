@@ -70,8 +70,14 @@
   .hero .amp{ color:var(--rust); }
   .hero .date{ margin-top:6px; font-size:1.05rem; letter-spacing:.08em; text-transform:uppercase; }
   .rings{ margin:22px auto 8px; display:block; }
+  .hero-photo-wrap{ position:relative; width:230px; max-width:60vw; margin:26px auto 6px; }
+  .duif-behind{
+    position:absolute; top:50%; left:50%; width:190%; max-width:none; height:auto;
+    transform:translate(-50%,-50%) rotate(9deg); z-index:0; pointer-events:none;
+    opacity:.9;
+  }
   .hero-photo{
-    width:230px; max-width:60vw; margin:26px auto 6px; padding:10px 10px 26px;
+    position:relative; z-index:1; width:100%; margin:0; padding:10px 10px 26px;
     background:var(--paper); box-shadow:0 10px 26px rgba(51,42,77,.22);
     transform:rotate(-3deg); border-radius:2px;
   }
@@ -90,6 +96,13 @@
   }
   .cta:hover, .cta:focus-visible{ background:var(--rust); color:var(--paper); }
   .welcome-text{ max-width:52ch; margin:26px auto 0; }
+  .scroll-hint{
+    display:flex; flex-direction:column; align-items:center; gap:2px;
+    margin-top:32px; font-family:"Caveat", cursive; font-weight:700;
+    font-size:1.15rem; color:var(--pine);
+  }
+  .scroll-hint .arrow{ font-size:1.3rem; animation:scrollbounce 1.6s ease-in-out infinite; }
+  @keyframes scrollbounce{ 0%,100%{ transform:translateY(0); } 50%{ transform:translateY(7px); } }
  
   /* ---- guest banner / preview switcher ---- */
   .guestbar{
@@ -208,6 +221,4 @@
   .stat{ background:var(--paper); border-radius:14px; padding:14px 20px; min-width:140px; box-shadow:0 4px 12px rgba(51,42,77,.12); }
   .stat .n{ font-size:1.8rem; font-weight:700; color:var(--pine); font-variant-numeric:tabular-nums; }
   .stat .l{ font-size:.72rem; text-transform:uppercase; letter-spacing:.06em; }
- 
-
 
