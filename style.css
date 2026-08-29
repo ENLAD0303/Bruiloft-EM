@@ -136,8 +136,7 @@
   }
   .toggle-row button.active-yes{ background:var(--pine); color:#fff; }
   .toggle-row button.active-no{ background:var(--rust); border-color:var(--rust); color:#fff; }
-  input[type="text"], input[type="number"], textarea{
-    width:100%; padding:10px 12px; border:1.5px solid var(--pine); border-radius:10px;
+  input[type="text"], input[type="number"], input[type="email"], input[type="tel"], textarea{    width:100%; padding:10px 12px; border:1.5px solid var(--pine); border-radius:10px;
     font-family:inherit; font-size:.95rem; background:#fff; color:var(--plum);
   }
   textarea{ resize:vertical; min-height:78px; }
