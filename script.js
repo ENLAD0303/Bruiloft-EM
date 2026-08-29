@@ -941,8 +941,3 @@
   setInterval(tickCountdown, 30000);
 })();
  
-
-
-  init();
-  setInterval(tickCountdown, 30000);
-})();
