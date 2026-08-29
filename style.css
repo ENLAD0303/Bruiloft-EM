@@ -24,11 +24,11 @@
   .wrap{ max-width:760px; margin:0 auto; padding:0 24px; }
   .prose{ max-width:65ch; }
   button{ font-family:inherit; }
-
+ 
   /* ---- shell / nav ---- */
   #shell{ position:relative; z-index:5; }
- .brandmark{ text-align:center; padding:14px 0 2px; background:var(--lilac); }
- .brandmark img{ width:64px; height:auto; display:inline-block; }
+  .brandmark{ text-align:center; padding:14px 0 2px; background:var(--lilac); }
+  .brandmark img{ width:64px; height:auto; display:inline-block; }
   .nav{
     position:sticky; top:0; z-index:20;
     background:rgba(228,222,251,.92);
@@ -54,7 +54,7 @@
   a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible{
     outline:3px solid var(--rust); outline-offset:2px;
   }
-
+ 
   /* ---- sections & bands ---- */
   section{ padding:64px 0; }
   .band{ background:var(--lilac-deep); }
@@ -63,7 +63,7 @@
     font-size:1.1rem; letter-spacing:.04em; margin:0 0 6px;
   }
   h2.title{ font-family:"Fraunces", Georgia, serif; font-weight:600; font-optical-sizing:auto; color:var(--pine); font-size:2.3rem; margin-bottom:22px; }
-
+ 
   /* ---- hero ---- */
   .hero{ padding:56px 0 48px; text-align:center; }
   .hero .names{ font-size:4.6rem; color:var(--pine); line-height:1.05; }
@@ -90,7 +90,7 @@
   }
   .cta:hover, .cta:focus-visible{ background:var(--rust); color:var(--paper); }
   .welcome-text{ max-width:52ch; margin:26px auto 0; }
-
+ 
   /* ---- guest banner / preview switcher ---- */
   .guestbar{
     max-width:760px; margin:0 auto 0; padding:14px 24px; text-align:center;
@@ -109,7 +109,7 @@
   .name-gate .hint{ font-size:.88rem; opacity:.85; }
   .name-gate input{ width:100%; padding:10px 12px; border:1.5px solid var(--pine); border-radius:10px; font-family:inherit; font-size:.95rem; margin-bottom:12px; }
   .name-gate .err{ color:var(--rust); font-weight:700; font-size:.85rem; margin-top:10px; }
-
+ 
   /* ---- timeline ---- */
   .day-heading{ font-family:"Caveat",cursive; font-weight:700; font-size:1.7rem; color:var(--pine); margin:34px 0 18px; }
   .day-heading:first-of-type{ margin-top:6px; }
@@ -125,7 +125,8 @@
   .tl-place{ font-weight:700; }
   .tl-address{ font-size:.9rem; opacity:.85; }
   .tl-note{ margin-top:6px; }
-  .cal-link{ display:inline-block; margin-top:8px; font-size:.85rem; font-weight:700; color:var(--pine); text-decoration:none; border-bottom:1px solid var(--pine); }
+  .cal-links{ display:flex; flex-wrap:wrap; gap:4px 16px; margin-top:8px; }
+  .cal-link{ display:inline-block; font-size:.85rem; font-weight:700; color:var(--pine); text-decoration:none; border-bottom:1px solid var(--pine); }
   .cal-link:hover, .cal-link:focus-visible{ color:var(--rust); border-color:var(--rust); }
   .tag-pill{
     display:inline-block; font-size:.68rem; letter-spacing:.06em; text-transform:uppercase;
@@ -133,7 +134,7 @@
     background:var(--lilac-deep); color:var(--plum); border:1px solid rgba(51,42,77,.25);
   }
   .tl-item.not-yours{ opacity:.4; }
-
+ 
   /* ---- rsvp form ---- */
   .card{ background:var(--paper); border-radius:18px; padding:28px 26px; box-shadow:0 8px 24px rgba(51,42,77,.14); }
   .field{ margin-bottom:22px; }
@@ -160,7 +161,7 @@
   .form-msg{ margin-top:14px; font-weight:700; }
   .form-msg.ok{ color:var(--pine); }
   .form-msg.err{ color:var(--rust); }
-
+ 
   /* ---- faq ---- */
   .faq-item{ border-bottom:1px solid rgba(51,42,77,.2); }
   .faq-item:first-child{ border-top:1px solid rgba(51,42,77,.2); }
@@ -174,7 +175,7 @@
   .faq-a{ padding:0 4px 18px; white-space:pre-line; display:none; }
   .faq-item[data-open="true"] .faq-a{ display:block; }
   .faq-updated{ font-size:.82rem; opacity:.7; margin-bottom:18px; }
-
+ 
   /* ---- gifts ---- */
   .sprig{ display:block; margin:0 auto 18px; }
   .photo-band{ width:100%; line-height:0; position:relative; }
@@ -193,10 +194,10 @@
   .faq-photo img{ width:100%; height:auto; max-height:420px; object-fit:cover; display:block; }
   .gift-photo{ width:min(440px,80vw); margin:0 auto 22px; border-radius:14px; overflow:hidden; box-shadow:0 8px 22px rgba(51,42,77,.18); }
   .gift-photo img{ width:100%; height:auto; display:block; }
-
+ 
   footer{ padding:40px 0 170px; text-align:center; font-size:.85rem; opacity:.75; }
   footer a{ color:inherit; }
-
+ 
   /* ---- admin ---- */
   .admin-wrap{ padding:40px 0 80px; }
   .admin-table{ width:100%; border-collapse:collapse; font-size:.85rem; }
@@ -207,3 +208,6 @@
   .stat{ background:var(--paper); border-radius:14px; padding:14px 20px; min-width:140px; box-shadow:0 4px 12px rgba(51,42,77,.12); }
   .stat .n{ font-size:1.8rem; font-weight:700; color:var(--pine); font-variant-numeric:tabular-nums; }
   .stat .l{ font-size:.72rem; text-transform:uppercase; letter-spacing:.06em; }
+ 
+
+
