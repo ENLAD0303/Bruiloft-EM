@@ -203,6 +203,7 @@
     weddingDateISO: "2027-05-22T15:00:00+02:00",
     welcomeText: "Wij gaan trouwen!? Wat de flip!! Hoe fijn dat wij ons grote feest met jou mogen vieren! Hier lees je meer over wat de dag inhoudt — en vergeet niet te RSVP’en :)",
     rsvpDeadlineText: "Laat het ons alsjeblieft vóór 22 maart 2027 weten!",
+    programmeNote: "Dit programma is nog onder voorbehoud; de tijden kunnen nog iets schuiven. Check deze pagina wat korter voor de bruiloft voor de juiste tijden!",
     tagLabels: {
       stadhuis: "Alle festiviteiten!",
       dag: "Diner, kerk en receptie!",
@@ -479,7 +480,8 @@
   function renderProgramme(){
     var attends = currentGuest ? CONTENT.tagAttends[currentGuest.tag] : (previewTag ? CONTENT.tagAttends[previewTag] : null);
     var html = '<section id="programma"><div class="wrap">'
-      + '<p class="eyebrow">Wat gaan we doen</p><h2 class="title">Programma</h2>';
+      + '<p class="eyebrow">Wat gaan we doen</p><h2 class="title">Programma</h2>'
+      + '<p class="hint">'+escapeHtml(CONTENT.programmeNote)+'</p>';
     if(!attends){
       html += renderNameGate("programma", "Vul je naam in om je programma te zien");
       html += '</div></section>';
@@ -933,8 +935,3 @@
   init();
   setInterval(tickCountdown, 30000);
 })();
- 
-
-
-
-
