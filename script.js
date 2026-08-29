@@ -14,83 +14,83 @@
     { "code": "test-dag", "naam": "Test Daggast", "tag": "dag" },
     { "code": "test-kerkreceptie", "naam": "Test Kerkreceptie", "tag": "kerkreceptie" },
     { "code": "test-kerk", "naam": "Test Kerk", "tag": "kerk" },
-    { "code": "esther-dijkman", "naam": "Esther Dijkman", "tag": "stadhuis" },
+    { "code": "esther-dijkman", "naam": "Esther Dijkman", "tag": "stadhuis", "partners": ["martijn-spierenburg"] },
     { "code": "eddy-dijkman", "naam": "Eddy Dijkman", "tag": "stadhuis" },
     { "code": "jonathan-dijkman", "naam": "Jonathan Dijkman", "tag": "stadhuis" },
-    { "code": "david-dijkman", "naam": "David Dijkman", "tag": "stadhuis" },
-    { "code": "lisa-berghorst", "naam": "Lisa Berghorst", "tag": "stadhuis" },
+    { "code": "david-dijkman", "naam": "David Dijkman", "tag": "stadhuis", "partners": ["lisa-berghorst"] },
+    { "code": "lisa-berghorst", "naam": "Lisa Berghorst", "tag": "stadhuis", "partners": ["david-dijkman"] },
     { "code": "lise-klapwijk", "naam": "Lise Klapwijk", "tag": "stadhuis" },
     { "code": "esther-nanlohy", "naam": "Esther Nanlohy", "tag": "stadhuis" },
     { "code": "saffira-frantzen", "naam": "Saffira Frantzen", "tag": "stadhuis" },
-    { "code": "martijn-spierenburg", "naam": "Martijn Spierenburg", "tag": "stadhuis" },
-    { "code": "peter-spierenburg", "naam": "Peter Spierenburg", "tag": "stadhuis" },
-    { "code": "arine-spierenburg", "naam": "Arine Spierenburg", "tag": "stadhuis" },
-    { "code": "carien-zaalmink", "naam": "Carien Zaalmink", "tag": "stadhuis" },
-    { "code": "bram-zaalmink", "naam": "Bram Zaalmink", "tag": "stadhuis" },
-    { "code": "thomas-spierenburg", "naam": "Thomas Spierenburg", "tag": "stadhuis" },
-    { "code": "jiske-van-der-schaft", "naam": "Jiske van der Schaft", "tag": "stadhuis" },
-    { "code": "opa-spierenburg", "naam": "Opa Spierenburg", "tag": "stadhuis" },
-    { "code": "oma-spierenburg", "naam": "Oma Spierenburg", "tag": "stadhuis" },
-    { "code": "jasper-hageman", "naam": "Jasper Hageman", "tag": "stadhuis" },
+    { "code": "martijn-spierenburg", "naam": "Martijn Spierenburg", "tag": "stadhuis", "partners": ["martijn-spierenburg"] },
+    { "code": "peter-spierenburg", "naam": "Peter Spierenburg", "tag": "stadhuis", "partners": ["arine-spierenburg"] },
+    { "code": "arine-spierenburg", "naam": "Arine Spierenburg", "tag": "stadhuis", "partners": ["peter-spierenburg"] },
+    { "code": "carien-zaalmink", "naam": "Carien Zaalmink", "tag": "stadhuis", "partners": ["bram-zaalmink"] },
+    { "code": "bram-zaalmink", "naam": "Bram Zaalmink", "tag": "stadhuis", "partners": ["carien-zaalmink"] },
+    { "code": "thomas-spierenburg", "naam": "Thomas Spierenburg", "tag": "stadhuis", "partners": ["jiske-van-der-schaft"] },
+    { "code": "jiske-van-der-schaft", "naam": "Jiske van der Schaft", "tag": "stadhuis", "partners": ["thomas-spierenburg"] },
+    { "code": "opa-spierenburg", "naam": "Opa Spierenburg", "tag": "stadhuis", "partners": ["oma-spierenburg"] },
+    { "code": "oma-spierenburg", "naam": "Oma Spierenburg", "tag": "stadhuis", "partners": ["opa-spierenburg"] },
+    { "code": "jasper-hageman", "naam": "Jasper Hageman", "tag": "stadhuis", "partners": ["acelya-gedik"] },
     { "code": "quentin-aker", "naam": "Quentin Aker", "tag": "stadhuis" },
     { "code": "elja-roelofsen", "naam": "Elja Roelofsen", "tag": "dag" },
-    { "code": "sophie-van-dam", "naam": "Sophie van Dam", "tag": "dag" },
-    { "code": "filip-smeets", "naam": "Filip Smeets", "tag": "dag" },
-    { "code": "lotte-van-veldhuizen", "naam": "Lotte van Veldhuizen", "tag": "dag" },
-    { "code": "lauge-kjaergaard-jensen", "naam": "Lauge Kjærgaard Jensen", "tag": "dag" },
-    { "code": "roos-los", "naam": "Roos Los", "tag": "dag" },
-    { "code": "jurjen-overbeek", "naam": "Jurjen Overbeek", "tag": "dag" },
+    { "code": "sophie-van-dam", "naam": "Sophie van Dam", "tag": "dag", "partners": ["filip-smeets"] },
+    { "code": "filip-smeets", "naam": "Filip Smeets", "tag": "dag", "partners": ["sophie-van-dam"] },
+    { "code": "lotte-van-veldhuizen", "naam": "Lotte van Veldhuizen", "tag": "dag", "partners": ["lauge-kjaergaard-jensen"] },
+    { "code": "lauge-kjaergaard-jensen", "naam": "Lauge Kjærgaard Jensen", "tag": "dag", "partners": ["lotte-van-veldhuizen"] },
+    { "code": "roos-los", "naam": "Roos Los", "tag": "dag", "partners": ["jurjen-overbeek"] },
+    { "code": "jurjen-overbeek", "naam": "Jurjen Overbeek", "tag": "dag", "partners": ["roos-los"] },
     { "code": "judith-graansma", "naam": "Judith Graansma", "tag": "dag" },
-    { "code": "tom-hardenberg", "naam": "Tom Hardenberg", "tag": "dag" },
-    { "code": "john-appiah", "naam": "John Appiah", "tag": "dag" },
-    { "code": "luuk-verbeek", "naam": "Luuk Verbeek", "tag": "dag" },
-    { "code": "rosanne-bunschoten", "naam": "Rosanne Bunschoten", "tag": "dag" },
+    { "code": "tom-hardenberg", "naam": "Tom Hardenberg", "tag": "dag", "partners": ["john-appiah"] },
+    { "code": "john-appiah", "naam": "John Appiah", "tag": "dag", "partners": ["tom-hardenberg"] },
+    { "code": "luuk-verbeek", "naam": "Luuk Verbeek", "tag": "dag", "partners": ["rosanne-bunschoten"] },
+    { "code": "rosanne-bunschoten", "naam": "Rosanne Bunschoten", "tag": "dag", "partners": ["luuk-verbeek"] },
     { "code": "matthijs-van-der-ploeg", "naam": "Matthijs van der Ploeg", "tag": "dag" },
     { "code": "joel-koppes", "naam": "Joël Koppes", "tag": "dag" },
-    { "code": "jesse-van-tilburg", "naam": "Jesse van Tilburg", "tag": "dag" },
-    { "code": "marjet-jonker", "naam": "Marjet Jonker", "tag": "dag" },
+    { "code": "jesse-van-tilburg", "naam": "Jesse van Tilburg", "tag": "dag", "partners": ["marjet-jonker"] },
+    { "code": "marjet-jonker", "naam": "Marjet Jonker", "tag": "dag", "partners": ["jesse-van-tilburg"] },
     { "code": "sophia-wallenburg", "naam": "Sophia Wallenburg", "tag": "dag" },
     { "code": "anja-van-der-ham", "naam": "Anja van der Ham", "tag": "dag" },
-    { "code": "acelya-gedik", "naam": "Açelya Gedik", "tag": "dag" },
-    { "code": "jurrien-van-t-oever", "naam": "Jurriën van t Oever", "tag": "dag" },
+    { "code": "acelya-gedik", "naam": "Açelya Gedik", "tag": "dag", "partners": ["jasper-hageman"] },
+    { "code": "jurrien-van-t-oever", "naam": "Jurriën van t Oever", "tag": "dag", "partners": ["joyce-brandes"] },
     { "code": "christiaan-veltkamp", "naam": "Christiaan Veltkamp", "tag": "dag" },
-    { "code": "joyce-brandes", "naam": "Joyce Brandes", "tag": "dag" },
-    { "code": "levi-springer", "naam": "Levi Springer", "tag": "dag" },
-    { "code": "isa-pardo", "naam": "Isa Pardo", "tag": "dag" },
-    { "code": "nordin-bigare", "naam": "Nordin Bigaré", "tag": "dag" },
-    { "code": "leander-wolters", "naam": "Leander Wolters", "tag": "dag" },
+    { "code": "joyce-brandes", "naam": "Joyce Brandes", "tag": "dag", "partners": ["jurrien-van-t-oever"] },
+    { "code": "levi-springer", "naam": "Levi Springer", "tag": "dag", "partners": ["isa-pardo"] },
+    { "code": "isa-pardo", "naam": "Isa Pardo", "tag": "dag", "partners": ["levi-springer"] },
+    { "code": "nordin-bigare", "naam": "Nordin Bigaré", "tag": "dag", "partners": ["leander-wolters"] },
+    { "code": "leander-wolters", "naam": "Leander Wolters", "tag": "dag", "partners": ["nordin-bigare"] },
     { "code": "ezra-leeuwenhage", "naam": "Ezra Leeuwenhage", "tag": "dag" },
-    { "code": "tein-van-riel", "naam": "Tein van Riel", "tag": "dag" },
-    { "code": "stas", "naam": "Stas", "tag": "dag", "looseName": true },
+    { "code": "tein-van-riel", "naam": "Tein van Riel", "tag": "dag", "partners": ["stas"] },
+    { "code": "stas", "naam": "Nastasia Filipovic", "tag": "dag", "looseName": true, "partners": ["tein-van-riel"] },
     { "code": "david-shader", "naam": "David Shader", "tag": "dag" },
     { "code": "louise-dijkman", "naam": "Louise Dijkman", "tag": "kerkreceptie" },
-    { "code": "bob-jeltes", "naam": "Bob Jeltes", "tag": "kerkreceptie" },
-    { "code": "tamara-jeltes", "naam": "Tamara Jeltes", "tag": "kerkreceptie" },
+    { "code": "bob-jeltes", "naam": "Bob Jeltes", "tag": "kerkreceptie", "partners": ["tamara-jeltes"] },
+    { "code": "tamara-jeltes", "naam": "Tamara Jeltes", "tag": "kerkreceptie", "partners": ["bob-jeltes"] },
     { "code": "dana-roelofsen", "naam": "Dana Roelofsen", "tag": "kerkreceptie" },
     { "code": "derk-roelofsen", "naam": "Derk Roelofsen", "tag": "kerkreceptie" },
-    { "code": "jan-roelofsen", "naam": "Jan Roelofsen", "tag": "kerkreceptie" },
-    { "code": "jannie-roelofsen", "naam": "Jannie Roelofsen", "tag": "kerkreceptie" },
+    { "code": "jan-roelofsen", "naam": "Jan Roelofsen", "tag": "kerkreceptie", "partners": ["jannie-roelofsen"] },
+    { "code": "jannie-roelofsen", "naam": "Jannie Roelofsen", "tag": "kerkreceptie", "partners": ["jan-roelofsen"] },
     { "code": "ria-dorrestein", "naam": "Ria Dorrestein", "tag": "kerkreceptie" },
     { "code": "jan-dorrestein", "naam": "Jan Dorrestein", "tag": "kerkreceptie" },
     { "code": "els-spierenburg", "naam": "Els Spierenburg", "tag": "kerkreceptie" },
     { "code": "echica-kolman", "naam": "Echica Kolman", "tag": "kerkreceptie" },
-    { "code": "nico-van-wijngaarden", "naam": "Nico van Wijngaarden", "tag": "kerkreceptie" },
-    { "code": "gerdien-van-wijngaarden", "naam": "Gerdien van Wijngaarden", "tag": "kerkreceptie" },
-    { "code": "jan-van-wijngaarden", "naam": "Jan van Wijngaarden", "tag": "kerkreceptie" },
-    { "code": "anke-willemstein", "naam": "Anke Willemstein", "tag": "kerkreceptie" },
+    { "code": "nico-van-wijngaarden", "naam": "Nico van Wijngaarden", "tag": "kerkreceptie", "partners": ["gerdien-van-wijngaarden"] },
+    { "code": "gerdien-van-wijngaarden", "naam": "Gerdien van Wijngaarden", "tag": "kerkreceptie", "partners": ["nico-van-wijngaarden"] },
+    { "code": "jan-van-wijngaarden", "naam": "Jan van Wijngaarden", "tag": "kerkreceptie", "partners": ["anke-willemstein"] },
+    { "code": "anke-willemstein", "naam": "Anke Willemstein", "tag": "kerkreceptie", "partners": ["jan-van-wijngaarden"] },
     { "code": "herman-van-wijngaarden", "naam": "Herman van Wijngaarden", "tag": "kerkreceptie" },
-    { "code": "els-tan", "naam": "Els Tan", "tag": "kerkreceptie" },
-    { "code": "geoffrey-tan", "naam": "Geoffrey Tan", "tag": "kerkreceptie" },
-    { "code": "joel-tan", "naam": "Joël Tan", "tag": "kerkreceptie" },
-    { "code": "femke", "naam": "Femke", "tag": "kerkreceptie", "looseName": true },
-    { "code": "tinie-bouw", "naam": "Tinie Bouw", "tag": "kerkreceptie" },
-    { "code": "paul-bouw", "naam": "Paul Bouw", "tag": "kerkreceptie" },
-    { "code": "lennart-bouw", "naam": "Lennart Bouw", "tag": "kerkreceptie" },
-    { "code": "colinda-bouw", "naam": "Colinda Bouw", "tag": "kerkreceptie" },
+    { "code": "els-tan", "naam": "Els Tan", "tag": "kerkreceptie", "partners": ["geoffrey-tan"] },
+    { "code": "geoffrey-tan", "naam": "Geoffrey Tan", "tag": "kerkreceptie", "partners": ["els-tan"] },
+    { "code": "joel-tan", "naam": "Joël Tan", "tag": "kerkreceptie", "partners": ["femke"] },
+    { "code": "femke", "naam": "Femke", "tag": "kerkreceptie", "looseName": true, "partners": ["joel-tan"] },
+    { "code": "tinie-bouw", "naam": "Tinie Bouw", "tag": "kerkreceptie", "partners": ["paul-bouw"] },
+    { "code": "paul-bouw", "naam": "Paul Bouw", "tag": "kerkreceptie", "partners": ["tinie-bouw"] },
+    { "code": "lennart-bouw", "naam": "Lennart Bouw", "tag": "kerkreceptie", "partners": ["colinda-bouw"] },
+    { "code": "colinda-bouw", "naam": "Colinda Bouw", "tag": "kerkreceptie", "partners": ["lennart-bouw"] },
     { "code": "menno-bouw", "naam": "Menno Bouw", "tag": "kerkreceptie" },
     { "code": "mandy-alboe-van-woudenberg", "naam": "Mandy Alboe-van Woudenberg", "tag": "kerkreceptie" },
-    { "code": "tom-van-baren", "naam": "Tom van Baren", "tag": "kerkreceptie" },
-    { "code": "lisa-van-baren", "naam": "Lisa van Baren", "tag": "kerkreceptie" },
+    { "code": "tom-van-baren", "naam": "Tom van Baren", "tag": "kerkreceptie", "partners": ["lisa-van-baren"] },
+    { "code": "lisa-van-baren", "naam": "Lisa van Baren", "tag": "kerkreceptie", "partners": ["tom-van-baren"] },
     { "code": "anne-marij", "naam": "Anne Marij", "tag": "kerkreceptie", "looseName": true },
     { "code": "pien-hoorweg", "naam": "Pien Hoorweg", "tag": "kerkreceptie" },
     { "code": "maryse-sturm", "naam": "Maryse Sturm", "tag": "kerkreceptie" },
@@ -103,8 +103,8 @@
     { "code": "yoni-tehubijuluw", "naam": "Yoni Tehubijuluw", "tag": "kerkreceptie" },
     { "code": "jochem-back", "naam": "Jochem Back", "tag": "kerkreceptie" },
     { "code": "maxime-plasmeijer", "naam": "Maxime Plasmeijer", "tag": "kerkreceptie" },
-    { "code": "yannik-t-hart", "naam": "Yannik 't Hart", "tag": "kerkreceptie" },
-    { "code": "astrid-schouten", "naam": "Astrid Schouten", "tag": "kerkreceptie" },
+    { "code": "yannik-t-hart", "naam": "Yannik 't Hart", "tag": "kerkreceptie", "partners": ["astrid-schouten"] },
+    { "code": "astrid-schouten", "naam": "Astrid Schouten", "tag": "kerkreceptie", "partners": ["yannik-t-hart"] },
     { "code": "mees-lindeman", "naam": "Mees Lindeman", "tag": "kerkreceptie" },
     { "code": "tristan-aker", "naam": "Tristan Aker", "tag": "kerkreceptie" },
     { "code": "yannick-spronk", "naam": "Yannick Spronk", "tag": "kerkreceptie" },
@@ -118,22 +118,22 @@
     { "code": "wisse-trommelen", "naam": "Wisse Trommelen", "tag": "kerkreceptie" },
     { "code": "marnik-linnekamp", "naam": "Marnik Linnekamp", "tag": "kerkreceptie" },
     { "code": "marit-elie", "naam": "Marit Elie", "tag": "kerkreceptie" },
-    { "code": "jolie-van-der-klis", "naam": "Jolie van der Klis", "tag": "kerkreceptie" },
+    { "code": "jolie-van-der-klis", "naam": "Jolie van der Klis", "tag": "kerkreceptie", "partners": ["edwin-martin"] },
     { "code": "rosalie-martin", "naam": "Rosalie Martin", "tag": "kerkreceptie" },
     { "code": "lexander-martin", "naam": "Lexander Martin", "tag": "kerkreceptie" },
-    { "code": "edwin-martin", "naam": "Edwin Martin", "tag": "kerkreceptie" },
-    { "code": "rik-van-wijngaarden", "naam": "Rik van Wijngaarden", "tag": "kerk" },
-    { "code": "ciska-van-wijngaarden", "naam": "Ciska van Wijngaarden", "tag": "kerk" },
-    { "code": "emma-baas", "naam": "Emma Baas", "tag": "kerk" },
-    { "code": "marnix-ruta", "naam": "Marnix Ruta", "tag": "kerk" },
-    { "code": "annah-planjer", "naam": "Annah Planjer", "tag": "kerk" },
-    { "code": "peter-burger", "naam": "Peter Burger", "tag": "kerk" },
-    { "code": "sofie-planjer", "naam": "Sofie Planjer", "tag": "kerk" },
-    { "code": "gijs", "naam": "Gijs", "tag": "kerk", "looseName": true },
-    { "code": "saar-planjer", "naam": "Saar Planjer", "tag": "kerk" },
-    { "code": "robin-grun", "naam": "Robin Grun", "tag": "kerk" },
-    { "code": "rolf", "naam": "Rolf", "tag": "kerk", "looseName": true },
-    { "code": "geke", "naam": "Geke", "tag": "kerk", "looseName": true },
+    { "code": "edwin-martin", "naam": "Edwin Martin", "tag": "kerkreceptie", "partners": ["jolie-van-der-klis"] },
+    { "code": "rik-van-wijngaarden", "naam": "Rik van Wijngaarden", "tag": "kerk", "partners": ["ciska-van-wijngaarden"] },
+    { "code": "ciska-van-wijngaarden", "naam": "Ciska van Wijngaarden", "tag": "kerk", "partners": ["rik-van-wijngaarden"] },
+    { "code": "emma-baas", "naam": "Emma Baas", "tag": "kerk", "partners": ["marnix-ruta"] },
+    { "code": "marnix-ruta", "naam": "Marnix Ruta", "tag": "kerk", "partners": ["emma-baas"] },
+    { "code": "annah-planjer", "naam": "Annah Planjer", "tag": "kerk", "partners": ["peter-burger"] },
+    { "code": "peter-burger", "naam": "Peter Burger", "tag": "kerk", "partners": ["annah-planjer"] },
+    { "code": "sofie-planjer", "naam": "Sofie Planjer", "tag": "kerk", "partners": ["gijs"] },
+    { "code": "gijs", "naam": "Gijs", "tag": "kerk", "looseName": true, "partners": ["sofie-planjer"] },
+    { "code": "saar-planjer", "naam": "Saar Planjer", "tag": "kerk", "partners": ["robin-grun"] },
+    { "code": "robin-grun", "naam": "Robin Grun", "tag": "kerk", "partners": ["saar-planjer"] },
+    { "code": "rolf", "naam": "Rolf", "tag": "kerk", "looseName": true, "partners": ["geke"] },
+    { "code": "geke", "naam": "Geke", "tag": "kerk", "looseName": true, "partners": ["rolf"] },
     { "code": "julia-raijmakers", "naam": "Julia Raijmakers", "tag": "kerk" },
     { "code": "isabelle-van-der-linden", "naam": "Isabelle van der Linden", "tag": "kerk" },
     { "code": "jorge-madridparedes", "naam": "Jorge Madridparedes", "tag": "kerk" },
@@ -141,38 +141,38 @@
     { "code": "danique-bruil", "naam": "Danique Bruil", "tag": "kerk" },
     { "code": "sabien-peeters", "naam": "Sabien Peeters", "tag": "kerk" },
     { "code": "kors-van-der-ent", "naam": "Kors van der Ent", "tag": "kerk" },
-    { "code": "karin-de-winter", "naam": "Karin de Winter", "tag": "kerk" },
-    { "code": "kees-de-winter", "naam": "Kees de Winter", "tag": "kerk" },
-    { "code": "floortje-sijpestein", "naam": "Floortje Sijpestein", "tag": "kerk" },
-    { "code": "maarten-sijpestein", "naam": "Maarten Sijpestein", "tag": "kerk" },
+    { "code": "karin-de-winter", "naam": "Karin de Winter", "tag": "kerk", "partners": ["kees-de-winter"] },
+    { "code": "kees-de-winter", "naam": "Kees de Winter", "tag": "kerk", "partners": ["karin-de-winter"] },
+    { "code": "floortje-sijpestein", "naam": "Floortje Sijpestein", "tag": "kerk", "partners": ["maarten-sijpestein", "luuk-sijpestein"] },
+    { "code": "maarten-sijpestein", "naam": "Maarten Sijpestein", "tag": "kerk", "partners": ["floortje-sijpestein", "luuk-sijpestein"] },
     { "code": "marije-witting", "naam": "Marije Witting", "tag": "kerk" },
     { "code": "rebecca-feddes", "naam": "Rebecca Feddes", "tag": "kerk" },
     { "code": "annegreeth-rozema", "naam": "Annegreeth Rozema", "tag": "kerk" },
     { "code": "thom-de-vries", "naam": "Thom de Vries", "tag": "kerk" },
-    { "code": "jonne", "naam": "Jonne", "tag": "kerk", "looseName": true },
-    { "code": "peter", "naam": "Peter", "tag": "kerk", "looseName": true },
+    { "code": "jonne", "naam": "Jonne", "tag": "kerk", "looseName": true, "partners": ["peter"] },
+    { "code": "peter", "naam": "Peter", "tag": "kerk", "looseName": true, "partners": ["jonne"] },
     { "code": "alexis", "naam": "Alexis", "tag": "kerk", "looseName": true },
     { "code": "delene", "naam": "Delene", "tag": "kerk", "looseName": true },
-    { "code": "ardt-klapwijk", "naam": "Ardt Klapwijk", "tag": "kerk" },
-    { "code": "fokelien-klapwijk", "naam": "Fokelien Klapwijk", "tag": "kerk" },
-    { "code": "bert-aker", "naam": "Bert Aker", "tag": "kerk" },
-    { "code": "jocelyne-aker", "naam": "Jocelyne Aker", "tag": "kerk" },
-    { "code": "luuk-sijpestein", "naam": "Luuk Sijpestein", "tag": "kerk" },
-    { "code": "miranda-hageman", "naam": "Miranda Hageman", "tag": "kerk" },
-    { "code": "chris-hageman", "naam": "Chris Hageman", "tag": "kerk" },
+    { "code": "ardt-klapwijk", "naam": "Ardt Klapwijk", "tag": "kerk", "partners": ["fokelien-klapwijk"] },
+    { "code": "fokelien-klapwijk", "naam": "Fokelien Klapwijk", "tag": "kerk", "partners": ["ardt-klapwijk"] },
+    { "code": "bert-aker", "naam": "Bert Aker", "tag": "kerk", "partners": ["jocelyne-aker"] },
+    { "code": "jocelyne-aker", "naam": "Jocelyne Aker", "tag": "kerk", "partners": ["bert-aker"] },
+    { "code": "luuk-sijpestein", "naam": "Luuk Sijpestein", "tag": "kerk", "partners": ["floortje-sijpestein", "maarten-sijpestein"] },
+    { "code": "miranda-hageman", "naam": "Miranda Hageman", "tag": "kerk", "partners": ["chris-hageman"] },
+    { "code": "chris-hageman", "naam": "Chris Hageman", "tag": "kerk", "partners": ["miranda-hageman"] },
     { "code": "annemiek", "naam": "Annemiek", "tag": "kerk", "looseName": true },
-    { "code": "roel", "naam": "Roel", "tag": "kerk", "looseName": true },
-    { "code": "nienke", "naam": "Nienke", "tag": "kerk", "looseName": true },
-    { "code": "joris", "naam": "Joris", "tag": "kerk", "looseName": true },
-    { "code": "amy", "naam": "Amy", "tag": "kerk", "looseName": true },
-    { "code": "eva-leusink", "naam": "Eva Leusink", "tag": "kerk" },
-    { "code": "arjan-leusink", "naam": "Arjan Leusink", "tag": "kerk" },
+    { "code": "roel", "naam": "Roel", "tag": "kerk", "looseName": true, "partners": ["nienke"] },
+    { "code": "nienke", "naam": "Nienke", "tag": "kerk", "looseName": true, "partners": ["roel"] },
+    { "code": "joris", "naam": "Joris", "tag": "kerk", "looseName": true, "partners": ["amy"] },
+    { "code": "amy", "naam": "Amy", "tag": "kerk", "looseName": true, "partners": ["joris"] },
+    { "code": "eva-leusink", "naam": "Eva Leusink", "tag": "kerk", "partners": ["arjan-leusink"] },
+    { "code": "arjan-leusink", "naam": "Arjan Leusink", "tag": "kerk", "partners": ["eva-leusink"] },
     { "code": "gert-jan-van-wijngaarden", "naam": "Gert-Jan van Wijngaarden", "tag": "kerk" },
     { "code": "ester-van-wijngaarden", "naam": "Ester van Wijngaarden", "tag": "kerk" },
-    { "code": "rachel-verdoold", "naam": "Rachel Verdoold", "tag": "kerk" },
-    { "code": "william-verdoold", "naam": "William Verdoold", "tag": "kerk" },
-    { "code": "naomi-de-ruiter", "naam": "Naomi de Ruiter", "tag": "kerk" },
-    { "code": "peter-de-ruiter", "naam": "Peter de Ruiter", "tag": "kerk" },
+    { "code": "rachel-verdoold", "naam": "Rachel Verdoold", "tag": "kerk", "partners": ["william-verdoold"] },
+    { "code": "william-verdoold", "naam": "William Verdoold", "tag": "kerk", "partners": ["rachel-verdoold"] },
+    { "code": "naomi-de-ruiter", "naam": "Naomi de Ruiter", "tag": "kerk", "partners": ["peter-de-ruiter"] },
+    { "code": "peter-de-ruiter", "naam": "Peter de Ruiter", "tag": "kerk", "partners": ["naomi-de-ruiter"] },
     { "code": "sten-smit", "naam": "Sten Smit", "tag": "kerk" },
     { "code": "david-geraedts", "naam": "David Geraedts", "tag": "kerk" },
     { "code": "luz-nebbeling", "naam": "Luz Nebbeling", "tag": "kerk" },
@@ -191,12 +191,12 @@
     { "code": "robin", "naam": "Robin", "tag": "kerk", "looseName": true },
     { "code": "yvonne-teitsma", "naam": "Yvonne Teitsma", "tag": "kerk" },
     { "code": "martijn", "naam": "Martijn", "tag": "kerk", "looseName": true },
-    { "code": "sonja-den-dikken", "naam": "Sonja den Dikken", "tag": "kerk" },
-    { "code": "arjen-den-dikken", "naam": "Arjen den Dikken", "tag": "kerk" },
-    { "code": "henriette-eijkelenboom", "naam": "Henriëtte Eijkelenboom", "tag": "kerk" },
-    { "code": "gerard-eijkelenboom", "naam": "Gerard Eijkelenboom", "tag": "kerk" },
-    { "code": "henriet-baas", "naam": "Henriët Baas", "tag": "kerk" },
-    { "code": "dick-baas", "naam": "Dick Baas", "tag": "kerk" }
+    { "code": "sonja-den-dikken", "naam": "Sonja den Dikken", "tag": "kerk", "partners": ["arjen-den-dikken"] },
+    { "code": "arjen-den-dikken", "naam": "Arjen den Dikken", "tag": "kerk", "partners": ["sonja-den-dikken"] },
+    { "code": "henriette-eijkelenboom", "naam": "Henriëtte Eijkelenboom", "tag": "kerk", "partners": ["gerard-eijkelenboom"] },
+    { "code": "gerard-eijkelenboom", "naam": "Gerard Eijkelenboom", "tag": "kerk", "partners": ["henriette-eijkelenboom"] },
+    { "code": "henriet-baas", "naam": "Henriët Baas", "tag": "kerk", "partners": ["dick-baas"] },
+    { "code": "dick-baas", "naam": "Dick Baas", "tag": "kerk", "partners": ["henriet-baas"] }
   ];
  
   var CONTENT = {
@@ -288,6 +288,7 @@
  
   var ADMIN_UNLOCKED = false;
   var CURRENT_RESPONSE = null; // the signed-in guest's own previously-submitted RSVP, if any
+  var PARTNER_STATUS = []; // [{code, naam, responded}] for the current guest's linked partners, if any
   var RESPONSES = []; // only populated for the admin overview, after password check
  
   function ringsSVG(){
@@ -323,6 +324,30 @@
       .catch(function(){ CURRENT_RESPONSE = null; });
   }
  
+  function fetchPartnerStatuses(guest){
+    if(!guest || !guest.partners || !guest.partners.length){ PARTNER_STATUS = []; return Promise.resolve(); }
+    return Promise.all(guest.partners.map(function(code){
+      var g = findGuestByCode(code);
+      return fetch("/api/rsvp?code=" + encodeURIComponent(code))
+        .then(function(r){ return r.ok ? r.json() : null; })
+        .then(function(data){
+          return { code: code, naam: g ? g.naam : code, responded: !!(data && data.response) };
+        })
+        .catch(function(){ return { code: code, naam: g ? g.naam : code, responded: false }; });
+    })).then(function(results){ PARTNER_STATUS = results; });
+  }
+ 
+  function renderPartnerNote(){
+    if(!PARTNER_STATUS.length) return "";
+    var missing = PARTNER_STATUS.filter(function(p){ return !p.responded; });
+    if(!missing.length) return "";
+    var names = missing.map(function(p){ return p.naam; });
+    var namesText = names.length === 1 ? names[0] : (names.slice(0,-1).join(", ") + " en " + names[names.length-1]);
+    var verb = names.length === 1 ? "moet" : "moeten";
+    var pron = names.length === 1 ? "die" : "zij";
+    return '<p class="hint partner-hint">Vergeet niet aan '+escapeHtml(namesText)+' door te geven dat '+pron+' ook nog '+verb+' RSVP\'en!</p>';
+  }
+ 
   function wireNameGates(){
     document.querySelectorAll(".name-gate-form").forEach(function(form){
       form.addEventListener("submit", function(ev){
@@ -333,7 +358,7 @@
         var match = findGuestByName(input.value);
         if(match){
           btn.disabled = true;
-          fetchExistingResponse(match.code).finally(function(){
+          Promise.all([fetchExistingResponse(match.code), fetchPartnerStatuses(match)]).finally(function(){
             currentGuest = match;
             previewTag = null;
             try{ localStorage.setItem("em_guest_code", match.code); }catch(e){}
@@ -352,6 +377,7 @@
         ev.preventDefault();
         currentGuest = null;
         CURRENT_RESPONSE = null;
+        PARTNER_STATUS = [];
         try{ localStorage.removeItem("em_guest_code"); }catch(e){}
         render();
       });
@@ -541,6 +567,7 @@
       + '<p class="eyebrow">Doe je mee?</p><h2 class="title">RSVP</h2>'
       + '<p class="hint">'+CONTENT.coupleNote+'</p>'
       + '<p class="hint">'+CONTENT.rsvpDeadlineText+'</p>'
+      + renderPartnerNote()
       + '<form class="card" id="rsvp-form" novalidate>'
       + '<p class="glabel">Naam</p><p style="margin-top:-8px;font-weight:700;">'+escapeHtml(guest.naam)+'</p>'
       + toggles
@@ -931,7 +958,7 @@
  
   function init(){
     if(currentGuest){
-      fetchExistingResponse(currentGuest.code).finally(render);
+      Promise.all([fetchExistingResponse(currentGuest.code), fetchPartnerStatuses(currentGuest)]).finally(render);
     } else {
       render();
     }
@@ -941,5 +968,7 @@
   setInterval(tickCountdown, 30000);
 })();
  
+
+
 
 
