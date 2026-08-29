@@ -184,8 +184,7 @@
   .gift-photo{ width:min(440px,80vw); margin:0 auto 22px; border-radius:14px; overflow:hidden; box-shadow:0 8px 22px rgba(51,42,77,.18); }
   .gift-photo img{ width:100%; height:auto; display:block; }
 
-  footer{ padding:40px 0 60px; text-align:center; font-size:.85rem; opacity:.75; }
-  footer a{ color:inherit; }
+  footer{ padding:40px 0 170px; text-align:center; font-size:.85rem; opacity:.75; }  footer a{ color:inherit; }
 
   /* ---- admin ---- */
   .admin-wrap{ padding:40px 0 80px; }
