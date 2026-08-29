@@ -199,9 +199,10 @@
  
   /* ---- gifts ---- */
   .sprig{ display:block; margin:0 auto 18px; }
-  .photo-band{ width:100%; line-height:0; position:relative; }
+  .photo-band{ width:100%; line-height:0; position:relative; overflow:hidden; }
   .photo-band img{ width:100%; height:auto; display:block; }
   .photo-band.hero-band img{ filter:brightness(.6); }
+  .photo-band.faq-band img{ height:clamp(260px, 34vw, 440px); object-fit:cover; object-position:center 26%; }
   .hero-band-overlay{
     position:absolute; inset:0; display:flex; flex-direction:column;
     align-items:center; justify-content:center; text-align:center;
@@ -215,6 +216,8 @@
   .faq-photo img{ width:100%; height:auto; max-height:420px; object-fit:cover; display:block; }
   .gift-photo{ width:min(440px,80vw); margin:0 auto 22px; border-radius:14px; overflow:hidden; box-shadow:0 8px 22px rgba(51,42,77,.18); }
   .gift-photo img{ width:100%; height:auto; display:block; }
+  .framed-photo{ width:min(440px,80vw); margin:0 auto 28px; border-radius:14px; overflow:hidden; box-shadow:0 8px 22px rgba(51,42,77,.18); }
+  .framed-photo img{ width:100%; height:auto; display:block; }
  
   footer{ padding:40px 0 170px; text-align:center; font-size:.85rem; opacity:.75; }
   footer a{ color:inherit; }
@@ -230,7 +233,5 @@
   .stat .n{ font-size:1.8rem; font-weight:700; color:var(--pine); font-variant-numeric:tabular-nums; }
   .stat .l{ font-size:.72rem; text-transform:uppercase; letter-spacing:.06em; }
  
-
-
 
 
