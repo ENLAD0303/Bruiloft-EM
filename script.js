@@ -203,7 +203,7 @@
     weddingDateISO: "2027-05-22T15:00:00+02:00",
     welcomeText: "Wij gaan trouwen!? Wat de flip!! Hoe fijn dat wij ons grote feest met jou mogen vieren! Hier lees je meer over wat de dag inhoudt — en vergeet niet te RSVP’en :)",
     rsvpDeadlineText: "Laat het ons alsjeblieft vóór 22 maart 2027 weten!",
-    programmeNote: "Dit programma is nog onder voorbehoud; de tijden kunnen nog iets schuiven. Check deze pagina wat korter voor de bruiloft voor de juiste tijden!",
+    programmeNote: "Dit is het programma zoals het er nu voor staat — de tijden zijn nog niet helemaal definitief. Kom gerust nog eens terug op deze pagina voor de laatste versie!",
     tagLabels: {
       stadhuis: "Alle festiviteiten!",
       dag: "Diner, kerk en receptie!",
@@ -237,9 +237,10 @@
       { q:"Voor wanneer kan ik uiterlijk RSVP’en?", a:"Laat alsjeblieft vóór 22 maart 2027 weten of je komt!" },
       { q:"Hoe kom ik bij de kerk?", a:"1. Parkeer bij een P+R en reis met het OV de stad in.\n2. Huur een OV-fiets vanaf Amsterdam Centraal of Amstel station en fiets een minuutje of 15." },
       { q:"Hoe kom ik bij de receptielocatie?", a:"Vanaf de kerk loop je in ongeveer 20 minuten naar de receptielocatie. Geen zin om te lopen? Pak dan tram 1, 7 of 19 vanaf halte Rijksmuseum naar Weesperplein. Daarvandaan is het nog tien minuten lopen, of pak daar de metro richting Amsterdam centraal station en stap uit bij Waterlooplein.", onlyReceptie:true},
-      { q:"Is er een dresscode?", a:"Later meer informatie!" }
+      { q:"Is er een dresscode?", a:"Later meer informatie!" },
+      { q:"Hoe bereik ik de ceremoniemeesters?", a:"Mail gerust naar e.m.ceremoniemeesters27@gmail.com, dan nemen ze contact met je op." }
     ],
-    faqUpdated: "laatste update 26 aug",
+    faqUpdated: "laatste update 29 aug",
     giftIntro: "Jullie aanwezigheid is het mooiste cadeau dat we ons kunnen wensen!",
     giftBody: "Maar mocht je toch iets willen geven, dan hebben we een verlanglijstje.",
     contactTitle: "Contact met de ceremoniemeesters",
@@ -931,6 +932,13 @@
       render();
     }
   }
+ 
+  init();
+  setInterval(tickCountdown, 30000);
+})();
+ 
+
+
  
   init();
   setInterval(tickCountdown, 30000);
