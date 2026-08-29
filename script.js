@@ -623,7 +623,7 @@
         + '<div class="faq-a">'+escapeHtml(f.a)+'</div></div>';
     }).join("");
     return '<section id="faq" class="band">'
-      + '<div class="photo-band faq-band"><img src="'+IMAGES.vangogh+'" alt="Esther en Martijn"></div>'
+      + '<div class="photo-band"><img src="'+IMAGES.vangogh+'" alt="Esther en Martijn"></div>'
       + '<div class="wrap">'
       + '<p class="eyebrow">Nog vragen?</p><h2 class="title">Veelgestelde vragen</h2>'
       + '<p class="faq-updated">'+escapeHtml(CONTENT.faqUpdated)+'</p>'
@@ -968,8 +968,3 @@
   setInterval(tickCountdown, 30000);
 })();
  
-
-
-
-
-
