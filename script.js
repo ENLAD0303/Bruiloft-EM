@@ -384,7 +384,7 @@
     var target = new Date(CONTENT.weddingDateISO).getTime();
     var guestLine = "";
     if(currentGuest){
-      guestLine = '<p class="guestbar"><span class="who">Welkom, '+escapeHtml(currentGuest.naam)+'</span><br>Wees welkom tijdens: <strong>'+escapeHtml(CONTENT.tagLabels[currentGuest.tag])+'</strong><br><a href="#" id="switch-guest" class="switch-link">Niet jouw naam? Wissel van gast</a></p>';
+      guestLine = '<p class="guestbar"><span class="who">Welkom, '+escapeHtml(currentGuest.naam)+'</span><br>Wees welkom tijdens: <strong>'+escapeHtml(CONTENT.tagLabels[currentGuest.tag])+'</strong><br><a href="#" id="switch-guest" class="switch-link">Niet jouw naam? Klik hier</a></p>';
     } else {
       guestLine = renderNameGate("hero", "Wie ben jij?");
     }
