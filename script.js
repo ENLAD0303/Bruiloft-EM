@@ -204,7 +204,7 @@
     weddingDateISO: "2027-05-22T15:00:00+02:00",
     welcomeText: "Wij gaan trouwen!? Wat de flip!! Hoe fijn dat wij ons grote feest met jou mogen vieren! Hier lees je meer over wat de dag inhoudt — en vergeet niet te RSVP’en :)",
     rsvpDeadlineText: "Laat het ons alsjeblieft vóór 22 maart 2027 weten!",
-    programmeNote: "De tijden van het programma zijn nog volledig definitief. Hou deze pagina dus voor de bruiloft in de gaten voor de juiste tijden!",
+    programmeNote: "De tijden van het programma zijn nog niet volledig definitief. Hou deze pagina dus voor de bruiloft in de gaten voor de juiste tijden!",
     coupleNote: "Zijn jij en je partner beide uitgenodigd? Zorg er dan voor dat je beide inlogt met je naam en RSVP't zodat voor ons duidelijk is dat jullie beiden komen. Dankjewel!",
     tagLabels: {
       stadhuis: "Alle festiviteiten!",
