@@ -63,24 +63,24 @@
     { "code": "tein-van-riel", "naam": "Tein van Riel", "tag": "dag", "partners": ["stas"] },
     { "code": "stas", "naam": "Nastasia Filipovic", "tag": "dag", "looseName": true, "partners": ["tein-van-riel"] },
     { "code": "david-shader", "naam": "David Shader", "tag": "dag" },
-    { "code": "louise-dijkman", "naam": "Louise Dijkman", "tag": "kerkreceptie" },
-    { "code": "bob-jeltes", "naam": "Bob Jeltes", "tag": "kerkreceptie", "partners": ["tamara-jeltes"] },
-    { "code": "tamara-jeltes", "naam": "Tamara Jeltes", "tag": "kerkreceptie", "partners": ["bob-jeltes"] },
-    { "code": "dana-roelofsen", "naam": "Dana Roelofsen", "tag": "kerkreceptie" },
-    { "code": "derk-roelofsen", "naam": "Derk Roelofsen", "tag": "kerkreceptie" },
-    { "code": "jan-roelofsen", "naam": "Jan Roelofsen", "tag": "kerkreceptie", "partners": ["jannie-roelofsen"] },
-    { "code": "jannie-roelofsen", "naam": "Jannie Roelofsen", "tag": "kerkreceptie", "partners": ["jan-roelofsen"] },
-    { "code": "ria-dorrestein", "naam": "Ria Dorrestein", "tag": "kerkreceptie" },
-    { "code": "jan-dorrestein", "naam": "Jan Dorrestein", "tag": "kerkreceptie" },
-    { "code": "els-spierenburg", "naam": "Els Spierenburg", "tag": "kerkreceptie" },
-    { "code": "echica-kolman", "naam": "Echica Kolman", "tag": "kerkreceptie" },
-    { "code": "nico-van-wijngaarden", "naam": "Nico van Wijngaarden", "tag": "kerkreceptie", "partners": ["gerdien-van-wijngaarden"] },
-    { "code": "gerdien-van-wijngaarden", "naam": "Gerdien van Wijngaarden", "tag": "kerkreceptie", "partners": ["nico-van-wijngaarden"] },
-    { "code": "jan-van-wijngaarden", "naam": "Jan van Wijngaarden", "tag": "kerkreceptie", "partners": ["anke-willemstein"] },
-    { "code": "anke-willemstein", "naam": "Anke Willemstein", "tag": "kerkreceptie", "partners": ["jan-van-wijngaarden"] },
-    { "code": "herman-van-wijngaarden", "naam": "Herman van Wijngaarden", "tag": "kerkreceptie" },
-    { "code": "els-tan", "naam": "Els Tan", "tag": "kerkreceptie", "partners": ["geoffrey-tan"] },
-    { "code": "geoffrey-tan", "naam": "Geoffrey Tan", "tag": "kerkreceptie", "partners": ["els-tan"] },
+    { "code": "louise-dijkman", "naam": "Louise Dijkman", "tag": "receptie" },
+    { "code": "bob-jeltes", "naam": "Bob Jeltes", "tag": "receptie", "partners": ["tamara-jeltes"] },
+    { "code": "tamara-jeltes", "naam": "Tamara Jeltes", "tag": "receptie", "partners": ["bob-jeltes"] },
+    { "code": "dana-roelofsen", "naam": "Dana Roelofsen", "tag": "receptie" },
+    { "code": "derk-roelofsen", "naam": "Derk Roelofsen", "tag": "receptie" },
+    { "code": "jan-roelofsen", "naam": "Jan Roelofsen", "tag": "receptie", "partners": ["jannie-roelofsen"] },
+    { "code": "jannie-roelofsen", "naam": "Jannie Roelofsen", "tag": "receptie", "partners": ["jan-roelofsen"] },
+    { "code": "ria-dorrestein", "naam": "Ria Dorrestein", "tag": "receptie" },
+    { "code": "jan-dorrestein", "naam": "Jan Dorrestein", "tag": "receptie" },
+    { "code": "els-spierenburg", "naam": "Els Spierenburg", "tag": "receptie" },
+    { "code": "echica-kolman", "naam": "Echica Kolman", "tag": "receptie" },
+    { "code": "nico-van-wijngaarden", "naam": "Nico van Wijngaarden", "tag": "receptie", "partners": ["gerdien-van-wijngaarden"] },
+    { "code": "gerdien-van-wijngaarden", "naam": "Gerdien van Wijngaarden", "tag": "receptie", "partners": ["nico-van-wijngaarden"] },
+    { "code": "jan-van-wijngaarden", "naam": "Jan van Wijngaarden", "tag": "receptie", "partners": ["anke-willemstein"] },
+    { "code": "anke-willemstein", "naam": "Anke Willemstein", "tag": "receptie", "partners": ["jan-van-wijngaarden"] },
+    { "code": "herman-van-wijngaarden", "naam": "Herman van Wijngaarden", "tag": "receptie" },
+    { "code": "els-tan", "naam": "Els Tan", "tag": "receptie", "partners": ["geoffrey-tan"] },
+    { "code": "geoffrey-tan", "naam": "Geoffrey Tan", "tag": "receptie", "partners": ["els-tan"] },
     { "code": "joel-tan", "naam": "Joël Tan", "tag": "kerkreceptie", "partners": ["femke"] },
     { "code": "femke", "naam": "Femke", "tag": "kerkreceptie", "looseName": true, "partners": ["joel-tan"] },
     { "code": "tinie-bouw", "naam": "Tinie Bouw", "tag": "kerkreceptie", "partners": ["paul-bouw"] },
@@ -237,8 +237,8 @@
     ],
     faq: [
       { q:"Voor wanneer kan ik uiterlijk RSVP’en?", a:"Laat alsjeblieft vóór 22 maart 2027 weten of je komt!" },
-      { q:"Hoe kom ik bij de kerk?", a:"1. Parkeer bij een P+R en reis met het OV de stad in.\n2. Huur een OV-fiets vanaf Amsterdam Centraal of Amstel station en fiets een minuutje of 15." },
-      { q:"Hoe kom ik bij de receptielocatie?", a:"Vanaf de kerk loop je in ongeveer 20 minuten naar de receptielocatie. Geen zin om te lopen? Pak dan tram 1, 7 of 19 vanaf halte Rijksmuseum naar Weesperplein. Daarvandaan is het nog tien minuten lopen, of pak daar de metro richting Amsterdam centraal station en stap uit bij Waterlooplein.", onlyReceptie:true},
+            { q:"Hoe kom ik bij de kerk?", a:"1. Parkeer bij een P+R en reis met het OV de stad in.\n2. Huur een OV-fiets vanaf Amsterdam Centraal of Amstel station en fiets een minuutje of 15.", onlyIdentified:true },
+      { q:"Hoe kom ik bij de receptielocatie?", a:"Vanaf de kerk loop je in ongeveer 20 minuten naar de receptielocatie. Geen zin om te lopen? Pak dan tram 1, 7 of 19 vanaf halte Rijksmuseum naar Weesperplein. Daarvandaan is het nog tien minuten lopen, of pak daar de metro richting Amsterdam centraal station en stap uit bij Waterlooplein.", onlyReceptie:true, onlyIdentified:true},
       { q:"Is er een dresscode?", a:"Later meer informatie!" },
       { q:"Hoe bereik ik de ceremoniemeesters?", a:"Mail naar e.m.ceremoniemeesters27@gmail.com, dan nemen zij contact met je op." }
     ],
@@ -614,8 +614,10 @@
   }
  
   function renderFaq(){
-    var visibleFaq = CONTENT.faq.filter(function(f){
-      return !f.onlyReceptie || guestAttendsReceptie();
+       var visibleFaq = CONTENT.faq.filter(function(f){
+      if(f.onlyReceptie && !guestAttendsReceptie()) return false;
+      if(f.onlyIdentified && !currentGuest && !previewTag) return false;
+      return true;
     });
     var items = visibleFaq.map(function(f,i){
       return '<div class="faq-item" data-open="false" data-i="'+i+'">'
