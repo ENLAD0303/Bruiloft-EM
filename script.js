@@ -540,7 +540,7 @@
   function renderRsvpForm(guest){
     if(!guest){
       return '<section id="rsvp" class="band"><div class="wrap">'
-        + '<p class="eyebrow">Doe je mee?</p><h2 class="title">RSVP</h2>'
+        + '<p class="eyebrow">Ben je erbij?</p><h2 class="title">RSVP</h2>'
         + '<p class="hint">'+CONTENT.coupleNote+'</p>'
         + renderNameGate("rsvp", "Vul je naam in om te RSVP'en")
         + '<p class="hint">'+CONTENT.rsvpDeadlineText+'</p>'
@@ -594,7 +594,7 @@
   function renderContact(){
     if(!guestAttendsReceptie()) return "";
     return '<section id="contact" class="band"><div class="wrap">'
-      + '<p class="eyebrow">Nog iets kwijt?</p><h2 class="title">'+escapeHtml(CONTENT.contactTitle)+'</h2>'
+      + '<p class="eyebrow">Wil je nog iets kwijt?</p><h2 class="title">'+escapeHtml(CONTENT.contactTitle)+'</h2>'
       + '<p class="hint">'+escapeHtml(CONTENT.contactIntro)+'</p>'
       + '<form class="card" id="contact-form" novalidate>'
       + '<div class="field"><label class="req" for="c-email">E-mailadres</label>'
@@ -623,7 +623,7 @@
     return '<section id="faq" class="band">'
       + '<div class="photo-band"><img src="'+IMAGES.vangogh+'" alt="Esther en Martijn"></div>'
       + '<div class="wrap">'
-      + '<p class="eyebrow">Nog vragen?</p><h2 class="title">Veelgestelde vragen</h2>'
+      + '<p class="eyebrow">Overige informatie</p><h2 class="title">Veelgestelde vragen</h2>'
       + '<p class="faq-updated">'+escapeHtml(CONTENT.faqUpdated)+'</p>'
       + items
       + '</div></section>';
