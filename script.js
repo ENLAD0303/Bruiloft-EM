@@ -10,11 +10,8 @@
   };
  
     var GUESTS = [
-    { "code": "test-stadhuis", "naam": "Test Stadhuis", "tag": "stadhuis" },
-    { "code": "test-dag", "naam": "Test Daggast", "tag": "dag" },
-    { "code": "test-kerkreceptie", "naam": "Test Kerkreceptie", "tag": "kerkreceptie" },
-    { "code": "test-kerk", "naam": "Test Kerk", "tag": "kerk" },
     { "code": "esther-dijkman", "naam": "Esther Dijkman", "tag": "stadhuis" },
+    { "code": "martijn-spierenburg", "naam": "Martijn Spierenburg", "tag": "stadhuis" },
     { "code": "eddy-dijkman", "naam": "Eddy Dijkman", "tag": "stadhuis" },
     { "code": "jonathan-dijkman", "naam": "Jonathan Dijkman", "tag": "stadhuis" },
     { "code": "david-dijkman", "naam": "David Dijkman", "tag": "stadhuis", "partners": ["lisa-berghorst"] },
@@ -22,7 +19,6 @@
     { "code": "lise-klapwijk", "naam": "Lise Klapwijk", "tag": "stadhuis" },
     { "code": "esther-nanlohy", "naam": "Esther Nanlohy", "tag": "stadhuis" },
     { "code": "saffira-frantzen", "naam": "Saffira Frantzen", "tag": "stadhuis" },
-    { "code": "martijn-spierenburg", "naam": "Martijn Spierenburg", "tag": "stadhuis" },
     { "code": "peter-spierenburg", "naam": "Peter Spierenburg", "tag": "stadhuis", "partners": ["arine-spierenburg"] },
     { "code": "arine-spierenburg", "naam": "Arine Spierenburg", "tag": "stadhuis", "partners": ["peter-spierenburg"] },
     { "code": "carien-zaalmink", "naam": "Carien Zaalmink", "tag": "stadhuis", "partners": ["bram-zaalmink"] },
