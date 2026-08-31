@@ -561,6 +561,9 @@
     }).join("");
     var dietField = needsFood ? '<div class="field"><label for="f-diet">Dieetwensen / allergieën (optioneel)</label>'
       + '<input type="text" id="f-diet" placeholder="bijv. vegetarisch, notenallergie, geen" value="'+escapeHtml(existing?existing.diet:"")+'"></div>' : "";
+    var showsSong = attends.indexOf("receptie") !== -1;
+    var songField = showsSong ? '<div class="field"><label for="f-song">Voor de lol: welk nummer moet er zeker op de dansvloer gedraaid worden?</label>'
+      + '<input type="text" id="f-song" placeholder="optioneel" value="'+escapeHtml(existing?existing.song:"")+'"></div>' : "";
     return '<section id="rsvp" class="band"><div class="wrap">'
       + '<p class="eyebrow">Doe je mee?</p><h2 class="title">RSVP</h2>'
       + '<p class="hint">'+CONTENT.coupleNote+'</p>'
@@ -574,8 +577,7 @@
       + '<textarea id="f-msg" placeholder="optioneel">'+escapeHtml(existing?existing.bericht:"")+'</textarea></div>'
       + '<div class="field"><label for="f-fun">Voor de lol: waar moeten wij heen op huwelijksreis?</label>'
       + '<input type="text" id="f-fun" placeholder="optioneel, alle tips welkom" value="'+escapeHtml(existing?existing.honeymoon:"")+'"></div>'
-      + '<div class="field"><label for="f-song">Voor de lol: welk nummer moet er zeker op de dansvloer gedraaid worden?</label>'
-      + '<input type="text" id="f-song" placeholder="optioneel" value="'+escapeHtml(existing?existing.song:"")+'"></div>'
+      + songField
       + '<button type="submit" class="submit-btn">RSVP versturen</button>'
       + '<div class="form-msg" id="form-msg" role="status"></div>'
       + '</form>'
@@ -916,6 +918,7 @@
       }
       var anyYes = attends.some(function(k){ return attendance[k]==="yes"; });
       var dietEl = document.getElementById("f-diet");
+      var songEl = document.getElementById("f-song");
       var response = {
         code: guest.code,
         attendance: attendance,
@@ -923,7 +926,7 @@
         diet: dietEl ? dietEl.value.trim() : "",
         bericht: document.getElementById("f-msg").value.trim(),
         honeymoon: document.getElementById("f-fun").value.trim(),
-        song: document.getElementById("f-song").value.trim(),
+        song: songEl ? songEl.value.trim() : "",
         submittedAt: Date.now()
       };
  
@@ -967,6 +970,4 @@
   init();
   setInterval(tickCountdown, 30000);
 })();
- 
-
 
