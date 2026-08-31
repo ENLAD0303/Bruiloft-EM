@@ -186,7 +186,7 @@
     { "code": "judith-van-den-berg", "naam": "Judith van den Berg", "tag": "kerk" },
     { "code": "robin", "naam": "Robin", "tag": "kerk", "looseName": true },
     { "code": "yvonne-teitsma", "naam": "Yvonne Teitsma", "tag": "kerk" },
-    { "code": "martijn", "naam": "Martijn", "tag": "kerk", "looseName": true },
+    { "code": "martijn-horsman", "naam": "Martijn Horsman", "tag": "kerk", "looseName": true },
     { "code": "sonja-den-dikken", "naam": "Sonja den Dikken", "tag": "kerk", "partners": ["arjen-den-dikken"] },
     { "code": "arjen-den-dikken", "naam": "Arjen den Dikken", "tag": "kerk", "partners": ["sonja-den-dikken"] },
     { "code": "henriette-eijkelenboom", "naam": "Henriëtte Eijkelenboom", "tag": "kerk", "partners": ["gerard-eijkelenboom"] },
