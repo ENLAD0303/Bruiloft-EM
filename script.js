@@ -49,7 +49,7 @@
     { "code": "anja-van-der-ham", "naam": "Anja van der Ham", "tag": "dag" },
     { "code": "acelya-gedik", "naam": "Açelya Gedik", "tag": "dag", "partners": ["jasper-hageman"] },
     { "code": "jurrien-van-t-oever", "naam": "Jurriën van t Oever", "tag": "dag", "partners": ["joyce-brandes"] },
-    { "code": "christian-veltkamp", "naam": "Christian Veltkamp", "tag": "dag" },
+    { "code": "christiaan-veltkamp", "naam": "Christiaan Veltkamp", "tag": "dag" },
     { "code": "joyce-brandes", "naam": "Joyce Brandes", "tag": "dag", "partners": ["jurrien-van-t-oever"] },
     { "code": "levi-springer", "naam": "Levi Springer", "tag": "dag", "partners": ["isa-pardo"] },
     { "code": "isa-pardo", "naam": "Isa Pardo", "tag": "dag", "partners": ["levi-springer"] },
@@ -192,7 +192,7 @@
     { "code": "henriette-eijkelenboom", "naam": "Henriëtte Eijkelenboom", "tag": "kerk", "partners": ["gerard-eijkelenboom"] },
     { "code": "gerard-eijkelenboom", "naam": "Gerard Eijkelenboom", "tag": "kerk", "partners": ["henriette-eijkelenboom"] },
     { "code": "henriet-baas", "naam": "Henriët Baas", "tag": "kerk", "partners": ["dick-baas"] },
-    { "code": "dick-baas", "naam": "Dick Baas", "tag": "kerk", "partners": ["henriet-baas"] }
+    { "code": "dick-baas", "naam": "Dick Baas", "tag": "kerk", "partners": ["henriet-baas"] },
     { "code": "omar-aljabi", "naam": "Omar Aljabi", "tag": "kerk", "partners": ["aimee"] },
     { "code": "aimee", "naam": "Aimee", "tag": "kerk", "looseName": true, "partners": ["omar-aljabi"] }
   ];
@@ -966,4 +966,3 @@
   init();
   setInterval(tickCountdown, 30000);
 })();
- 
