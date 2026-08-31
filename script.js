@@ -608,6 +608,7 @@
       + '</div></section>';
   }
  
+  function renderFaq(){
     var visibleFaq = CONTENT.faq.filter(function(f){
       if(f.onlyReceptie && !guestAttendsReceptie()) return false;
       if(f.onlyIdentified && !currentGuest && !previewTag) return false;
