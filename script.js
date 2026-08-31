@@ -237,6 +237,7 @@
       { q:"Voor wanneer kan ik uiterlijk RSVP’en?", a:"Laat alsjeblieft vóór 22 maart 2027 weten of je komt!" },
       { q:"Hoe kom ik bij de kerk?", a:"1. Parkeer bij een P+R en reis met het OV de stad in.\n2. Huur een OV-fiets vanaf Amsterdam Centraal of Amstel station en fiets een minuutje of 15.", onlyIdentified:true },
       { q:"Hoe kom ik bij de receptielocatie?", a:"Vanaf de kerk loop je in ongeveer 20 minuten naar de receptielocatie. Geen zin om te lopen? Pak dan tram 1, 7 of 19 vanaf halte Rijksmuseum naar Weesperplein. Daarvandaan is het nog tien minuten lopen, of pak daar de metro richting Amsterdam centraal station en stap uit bij Waterlooplein.", onlyReceptie:true, onlyIdentified:true},
+      { q:"Is er een dresscode?", a:"Later meer informatie!", onlyReceptie:true },
       { q:"Hoe bereik ik de ceremoniemeesters?", a:"Mail naar e.m.ceremoniemeesters27@gmail.com, dan nemen zij contact met je op." }
     ],
     faqUpdated: "laatste update 26 aug",
@@ -966,3 +967,6 @@
   init();
   setInterval(tickCountdown, 30000);
 })();
+ 
+
+
