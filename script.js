@@ -970,3 +970,4 @@
   init();
   setInterval(tickCountdown, 30000);
 })();
+ 
