@@ -208,13 +208,15 @@
       stadhuis: "Alle festiviteiten!",
       dag: "Diner, kerk en receptie!",
       kerkreceptie: "Kerk + receptie",
-      kerk: "Kerk"
+      kerk: "Kerk",
+      receptie: "Receptie"
     },
     tagAttends: {
       stadhuis: ["stadhuis","diner","kerk","receptie"],
       dag: ["diner","kerk","receptie"],
       kerkreceptie: ["kerk","receptie"],
-      kerk: ["kerk"]
+      kerk: ["kerk"],
+      receptie: ["receptie"]
     },
     eventLabels: {
       stadhuis: "het stadhuis",
@@ -970,4 +972,3 @@
   init();
   setInterval(tickCountdown, 30000);
 })();
- 
