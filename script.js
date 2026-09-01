@@ -113,7 +113,7 @@
     { "code": "paul-niemoller", "naam": "Paul Niemöller", "tag": "kerkreceptie" },
     { "code": "wisse-trommelen", "naam": "Wisse Trommelen", "tag": "kerkreceptie" },
     { "code": "marnik-linnekamp", "naam": "Marnik Linnekamp", "tag": "kerkreceptie" },
-    { "code": "marit-elie", "naam": "Marit Elie", "tag": "kerkreceptie" },
+    { "code": "marit-elie", "naam": "Marit Elie", "tag": "kerkreceptie", "partners": ["mirko-de-boer"] },
     { "code": "jolie-van-der-klis", "naam": "Jolie van der Klis", "tag": "kerkreceptie", "partners": ["edwin-martin"] },
     { "code": "rosalie-martin", "naam": "Rosalie Martin", "tag": "kerkreceptie" },
     { "code": "lexander-martin", "naam": "Lexander Martin", "tag": "kerkreceptie" },
@@ -194,7 +194,9 @@
     { "code": "henriet-baas", "naam": "Henriët Baas", "tag": "kerk", "partners": ["dick-baas"] },
     { "code": "dick-baas", "naam": "Dick Baas", "tag": "kerk", "partners": ["henriet-baas"] },
     { "code": "omar-aljabi", "naam": "Omar Aljabi", "tag": "kerk", "partners": ["aimee"] },
-    { "code": "aimee", "naam": "Aimee", "tag": "kerk", "looseName": true, "partners": ["omar-aljabi"] }
+    { "code": "aimee", "naam": "Aimee", "tag": "kerk", "looseName": true, "partners": ["omar-aljabi"] },
+    { "code": "derk-jan-post", "naam": "Derk Jan Post", "tag": "kerkreceptie" },
+    { "code": "mirko-de-boer", "naam": "Mirko de Boer", "tag": "kerkreceptie", "partners": ["marit-elie"] }
   ];
  
   var CONTENT = {
@@ -970,6 +972,4 @@
   init();
   setInterval(tickCountdown, 30000);
 })();
- 
-
 
