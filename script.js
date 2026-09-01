@@ -59,24 +59,24 @@
     { "code": "tein-van-riel", "naam": "Tein van Riel", "tag": "dag", "partners": ["stas"] },
     { "code": "stas", "naam": "Nastasia Filipovic", "tag": "dag", "looseName": true, "partners": ["tein-van-riel"] },
     { "code": "david-shader", "naam": "David Shader", "tag": "dag" },
-    { "code": "louise-dijkman", "naam": "Louise Dijkman", "tag": "receptie" },
-    { "code": "bob-jeltes", "naam": "Bob Jeltes", "tag": "receptie", "partners": ["tamara-jeltes"] },
-    { "code": "tamara-jeltes", "naam": "Tamara Jeltes", "tag": "receptie", "partners": ["bob-jeltes"] },
-    { "code": "dana-roelofsen", "naam": "Dana Roelofsen", "tag": "receptie" },
-    { "code": "derk-roelofsen", "naam": "Derk Roelofsen", "tag": "receptie" },
-    { "code": "jan-roelofsen", "naam": "Jan Roelofsen", "tag": "receptie", "partners": ["jannie-roelofsen"] },
-    { "code": "jannie-roelofsen", "naam": "Jannie Roelofsen", "tag": "receptie", "partners": ["jan-roelofsen"] },
-    { "code": "ria-dorrestein", "naam": "Ria Dorrestein", "tag": "receptie" },
-    { "code": "jan-dorrestein", "naam": "Jan Dorrestein", "tag": "receptie" },
-    { "code": "els-spierenburg", "naam": "Els Spierenburg", "tag": "receptie" },
-    { "code": "echica-kolman", "naam": "Echica Kolman", "tag": "receptie" },
-    { "code": "nico-van-wijngaarden", "naam": "Nico van Wijngaarden", "tag": "receptie", "partners": ["gerdien-van-wijngaarden"] },
-    { "code": "gerdien-van-wijngaarden", "naam": "Gerdien van Wijngaarden", "tag": "receptie", "partners": ["nico-van-wijngaarden"] },
-    { "code": "jan-van-wijngaarden", "naam": "Jan van Wijngaarden", "tag": "receptie", "partners": ["anke-willemstein"] },
-    { "code": "anke-willemstein", "naam": "Anke Willemstein", "tag": "receptie", "partners": ["jan-van-wijngaarden"] },
-    { "code": "herman-van-wijngaarden", "naam": "Herman van Wijngaarden", "tag": "receptie" },
-    { "code": "els-tan", "naam": "Els Tan", "tag": "receptie", "partners": ["geoffrey-tan"] },
-    { "code": "geoffrey-tan", "naam": "Geoffrey Tan", "tag": "receptie", "partners": ["els-tan"] },
+    { "code": "louise-dijkman", "naam": "Louise Dijkman", "tag": "kerkreceptie" },
+    { "code": "bob-jeltes", "naam": "Bob Jeltes", "tag": "kerkreceptie", "partners": ["tamara-jeltes"] },
+    { "code": "tamara-jeltes", "naam": "Tamara Jeltes", "tag": "kerkreceptie", "partners": ["bob-jeltes"] },
+    { "code": "dana-roelofsen", "naam": "Dana Roelofsen", "tag": "kerkreceptie" },
+    { "code": "derk-roelofsen", "naam": "Derk Roelofsen", "tag": "kerkreceptie" },
+    { "code": "jan-roelofsen", "naam": "Jan Roelofsen", "tag": "kerkreceptie", "partners": ["jannie-roelofsen"] },
+    { "code": "jannie-roelofsen", "naam": "Jannie Roelofsen", "tag": "kerkreceptie", "partners": ["jan-roelofsen"] },
+    { "code": "ria-dorrestein", "naam": "Ria Dorrestein", "tag": "kerkreceptie" },
+    { "code": "jan-dorrestein", "naam": "Jan Dorrestein", "tag": "kerkreceptie" },
+    { "code": "els-spierenburg", "naam": "Els Spierenburg", "tag": "kerkreceptie" },
+    { "code": "echica-kolman", "naam": "Echica Kolman", "tag": "kerkreceptie" },
+    { "code": "nico-van-wijngaarden", "naam": "Nico van Wijngaarden", "tag": "kerkreceptie", "partners": ["gerdien-van-wijngaarden"] },
+    { "code": "gerdien-van-wijngaarden", "naam": "Gerdien van Wijngaarden", "tag": "kerkreceptie", "partners": ["nico-van-wijngaarden"] },
+    { "code": "jan-van-wijngaarden", "naam": "Jan van Wijngaarden", "tag": "kerkreceptie", "partners": ["anke-willemstein"] },
+    { "code": "anke-willemstein", "naam": "Anke Willemstein", "tag": "kerkreceptie", "partners": ["jan-van-wijngaarden"] },
+    { "code": "herman-van-wijngaarden", "naam": "Herman van Wijngaarden", "tag": "kerkreceptie" },
+    { "code": "els-tan", "naam": "Els Tan", "tag": "kerkreceptie", "partners": ["geoffrey-tan"] },
+    { "code": "geoffrey-tan", "naam": "Geoffrey Tan", "tag": "kerkreceptie", "partners": ["els-tan"] },
     { "code": "joel-tan", "naam": "Joël Tan", "tag": "kerkreceptie", "partners": ["femke"] },
     { "code": "femke", "naam": "Femke", "tag": "kerkreceptie", "looseName": true, "partners": ["joel-tan"] },
     { "code": "tinie-bouw", "naam": "Tinie Bouw", "tag": "kerkreceptie", "partners": ["paul-bouw"] },
@@ -208,15 +208,13 @@
       stadhuis: "Alle festiviteiten!",
       dag: "Diner, kerk en receptie!",
       kerkreceptie: "Kerk + receptie",
-      kerk: "Kerk",
-      receptie: "Receptie"
+      kerk: "Kerk"
     },
     tagAttends: {
       stadhuis: ["stadhuis","diner","kerk","receptie"],
       dag: ["diner","kerk","receptie"],
       kerkreceptie: ["kerk","receptie"],
-      kerk: ["kerk"],
-      receptie: ["receptie"]
+      kerk: ["kerk"]
     },
     eventLabels: {
       stadhuis: "het stadhuis",
@@ -972,3 +970,6 @@
   init();
   setInterval(tickCountdown, 30000);
 })();
+ 
+
+
